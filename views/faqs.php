@@ -9,19 +9,17 @@ try {
 }
 
 ?>
-
-<section class="container-fluid mt-3">
-    <h1 class="display-4 fw-normal text-body-emphasis text-center">FAQs</h1>
-
+<h1 class="display-4 fw-normal text-body-emphasis text-center m-3">FAQs</h1>
+<section class="container-fluid mt-3 col col-6">
     <div class="accordion" id="accordionExample">
         <?php foreach ($faqs as $item) : ?>
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $item['id_faq'] ?>" aria-expanded="false" aria-controls="collapseOne">
                         <?= $item['pergunta_faq'] ?>
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div id="collapse<?= $item['id_faq'] ?>" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <?= $item['resposta_faq'] ?>
                     </div>
