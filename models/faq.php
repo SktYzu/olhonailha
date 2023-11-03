@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "/projeto_90/db/conexao.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/olhonailha/db/conexao.php";
 
 class Faq{
     public $id_faq;

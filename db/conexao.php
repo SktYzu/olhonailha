@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . "/projeto_90/configs/config.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/olhonailha/configs/config.php";
 
 class Conexao
 {

@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/projeto_90/models/faq.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/faq.php';
 
 try {
     $id = $_GET['id'];
@@ -8,7 +8,7 @@ try {
 
     $faq->deletar();
 
-    header('Location: /projeto_90/views/admin/faqs_listar.php');
+    header('Location: /olhonailha/views/admin/faqs_listar.php');
     exit();
 } catch (PDOException $e) {
     echo $e->getMessage();

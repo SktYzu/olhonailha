@@ -1,6 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/projeto_90/templates/_cabecalho.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/projeto_90/models/faq.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/faq.php';
 
 try {
     $id = $_GET['id'];
@@ -13,7 +13,7 @@ try {
 
 <h1 class="display-4 fw-normal text-body-emphasis text-center m-3">Editar FAQ</h1>
 <section class="d-flex justify-content-center m-3">
-    <form action="/projeto_90/controllers/faq_edit_controller.php" method="post" class="col col-4 p-3 bg-body-tertiary">
+    <form action="/olhonailha/controllers/faq_edit_controller.php" method="post" class="col col-4 p-3 bg-body-tertiary">
         <input type="hidden" name="id" value="<?= $faq->id_faq ?>">
 
         <div class="col-12">

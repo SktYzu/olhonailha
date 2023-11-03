@@ -1,6 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/projeto_90/templates/_cabecalho.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/projeto_90/models/faq.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/faq.php';
 
 try {
     $faqs = Faq::listar();
@@ -18,7 +18,7 @@ try {
             <th>Pergunta</th>
             <th>Resposta</th>
             <th colspan="2">
-                <a href="/projeto_90/views/admin/faq_criar.php" class="btn btn-outline-success">Adicionar</a>
+                <a href="/olhonailha/views/admin/faq_criar.php" class="btn btn-outline-success">Adicionar</a>
             </th>
         </tr>
 
@@ -28,10 +28,10 @@ try {
                 <td><?= $f['pergunta_faq'] ?></td>
                 <td><?= $f['resposta_faq'] ?></td>
                 <td>
-                    <a href="/projeto_90/views/admin/faq_editar.php?id=<?= $f['id_faq'] ?>" class="btn btn-outline-primary">Editar</a>
+                    <a href="/olhonailha/views/admin/faq_editar.php?id=<?= $f['id_faq'] ?>" class="btn btn-outline-primary">Editar</a>
                 </td>
                 <td>
-                    <a href="/projeto_90/controllers/faq_delete_controller.php?id=<?= $f['id_faq'] ?>" class="btn btn-outline-danger">Deletar</a>
+                    <a href="/olhonailha/controllers/faq_delete_controller.php?id=<?= $f['id_faq'] ?>" class="btn btn-outline-danger">Deletar</a>
                 </td>
             </tr>
         <?php endforeach; ?>

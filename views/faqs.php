@@ -1,6 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/projeto_90/templates/_cabecalho.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/projeto_90/models/faq.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/faq.php';
 
 try {
     $faqs = Faq::listar();
