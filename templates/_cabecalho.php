@@ -34,6 +34,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/olhonailha/views/admin/perfil.php">Perfil</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/olhonailha/views/login.php">login</a>
+                        </li>
                     </ul>
                 </div>
             </div>
