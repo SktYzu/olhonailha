@@ -1,0 +1,15 @@
+
+.container_denu{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+.card {
+    width: 70vw;
+    background-color: #f5f5f5;
+
+
+}

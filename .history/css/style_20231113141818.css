@@ -1,4 +1,5 @@
-.container_denu {
+
+.container_denu{
     display: flex;
     justify-content: center;
     align-content: center;
@@ -48,15 +49,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
-.centro {
+.centro{
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-content:center;
     align-items: center;
     flex-direction: column;
 }
-
-.texto {
+.texto{
     white-space: pre;
 }
