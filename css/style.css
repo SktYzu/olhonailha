@@ -8,46 +8,17 @@
     max-width: 960px;
 }
 
-.container_card {
+.container_denu{
     display: flex;
     justify-content: center;
-    gap: 10px;
-    flex-direction: column;
-    flex-wrap: wrap;
     align-content: center;
-    margin-top: 10px;
+    align-items: center;
 }
+
 
 .card {
-    width: auto;
-    background-color: #f8f9fa;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    padding: 10px;
+    width: 70vw;
+    background-color: #f5f5f5;
 
 
-}
-
-.card-desc {
-    display: grid;
-    gap: 10px;
-}
-
-.texto_limitado {
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.centro{
-    display: flex;
-    justify-content: center;
-    align-content:center;
-    align-items: center;
-    flex-direction: column;
-}
-.texto{
-    white-space: pre;
 }
