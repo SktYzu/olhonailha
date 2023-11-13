@@ -17,22 +17,22 @@ try {
     <?php foreach ($denuncias as $d): ?>
         <div class="card">
             <div>
-            <img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px" height="200px">
+            <img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="380px" height="280px">
             </div>
             <div class="card-desc">
                 <div>
-                    <h4>
-                        <?=$d['titulo']?>  :em aberto
-                    </h4>
+                    <h1>
+                        <?=$d['titulo']?>: em aberto
+                    </h1>
                 </div>
                 <div>
-                    <h5>descrição:</h5>
+                    <h3>descrição:</h3>
                     <p class="texto_limitado">
                     <?=$d['descricao']?>
                     </p>
                 </div>
                 <div>
-                    <h5>Local:</h5>
+                    <h3>Local:</h3>
                     <p><?=$d['local_denuncia']?></p>
                 </div>
             </div>

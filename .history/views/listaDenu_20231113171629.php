@@ -21,18 +21,18 @@ try {
             </div>
             <div class="card-desc">
                 <div>
-                    <h4>
+                    <h3>
                         <?=$d['titulo']?>  :em aberto
-                    </h4>
+                    </h3>
                 </div>
                 <div>
-                    <h5>descrição:</h5>
+                    <h>descrição:</h5>
                     <p class="texto_limitado">
                     <?=$d['descricao']?>
                     </p>
                 </div>
                 <div>
-                    <h5>Local:</h5>
+                    <h3>Local:</h3>
                     <p><?=$d['local_denuncia']?></p>
                 </div>
             </div>

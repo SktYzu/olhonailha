@@ -26,13 +26,13 @@ try {
                     </h4>
                 </div>
                 <div>
-                    <h5>descrição:</h5>
+                    <h4>descrição:</h4>
                     <p class="texto_limitado">
                     <?=$d['descricao']?>
                     </p>
                 </div>
                 <div>
-                    <h5>Local:</h5>
+                    <h4>Local:</h4>
                     <p><?=$d['local_denuncia']?></p>
                 </div>
             </div>

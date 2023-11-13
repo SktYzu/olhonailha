@@ -26,7 +26,7 @@ try {
                     </h4>
                 </div>
                 <div>
-                    <h5>descrição:</h5>
+                    <h4>descrição:</h4>
                     <p class="texto_limitado">
                     <?=$d['descricao']?>
                     </p>
