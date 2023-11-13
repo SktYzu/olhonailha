@@ -37,7 +37,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/olhonailha/views/login.php">login</a>
                         </li>
-                       < <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/olhonailha/views/denuncia.php">Denuncia</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" href="/olhonailha/views/listaDenu.php">Teste</a>
                         </li>
                     </ul>
