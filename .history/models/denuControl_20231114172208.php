@@ -18,6 +18,8 @@ class denuncia
         if ($id_denuncia) {
             $this->id_denuncia = $id_denuncia;
             $this->carregar();
+            var_dump($this->id_denuncia);
+            exit();
         }
     }
 

@@ -12,8 +12,8 @@ try {
 } */
 ?>
 
-<div class="centro">
-    <h1>Aqui pode ser um botão de adicionar denuncia ? </h1>
+<div>
+    <h1>Aqui pode ser um </h1>
 </div>
 
 <div class="container_card">

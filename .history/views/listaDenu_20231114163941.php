@@ -12,7 +12,7 @@ try {
 } */
 ?>
 
-<div class="centro">
+<div class centro>
     <h1>Aqui pode ser um botão de adicionar denuncia ? </h1>
 </div>
 

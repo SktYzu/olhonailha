@@ -28,10 +28,12 @@ class denuncia
         $stmt -> bindValue(':id', $this->id_denuncia);
         $stmt->execute();
         $denuncia = $stmt->fetch();
+        var_dump($denuncia);
         $this->titulo = $denuncia['titulo'];
         $this->descricao = $denuncia['descricao'];
         $this->foto_denuncia = $denuncia['foto_denuncia'];
         $this->local_denuncia = $denuncia['local_denuncia'];
+        $this->id_usuario = $denuncia['id_usuario'];
     }
 
     public function criar()
@@ -56,6 +58,16 @@ class denuncia
         $stmt -> execute();
         $lista = $stmt->fetchAll();
         return $lista ;}
+        public static function listaruser($id_usuario)
+    {
+        $querry = "SELECT * FROM denuncias where id_usuario= :idu";
+        $conexao = conectarDB::conectar();
+        $stmt = $conexao->prepare($querry);
+        $stmt->bindValue(":idu", $id_usuario);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
 
     public  function editar()
     {

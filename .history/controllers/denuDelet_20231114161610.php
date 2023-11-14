@@ -8,7 +8,7 @@ try {
 
     $denuncia->deletar();
 
-    header('location:../views/admin/controlDenu.php');
+    header('location:../views/admincontrolDenu.php');
     exit();
 } catch (PDOException $e) {
     echo $e->getMessage();

@@ -1,6 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/controllers/conectar.php';
-
+require_once("conectar.php");
 
 class denuncia
 {
@@ -30,6 +29,7 @@ class denuncia
         $stmt -> bindValue(':id', $this->id_denuncia);
         $stmt->execute();
         $denuncia = $stmt->fetch();
+        exit();
         $this->titulo = $denuncia['titulo'];
         $this->descricao = $denuncia['descricao'];
         $this->foto_denuncia = $denuncia['foto_denuncia'];

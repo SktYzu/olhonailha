@@ -18,7 +18,7 @@ CREATE TABLE TiposDenuncias(
     id_tipo INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
     descricao TEXT
-); 
+);  
 
 /* armazena a denuncia */
 CREATE TABLE Denuncias(

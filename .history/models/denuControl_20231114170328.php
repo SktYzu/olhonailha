@@ -1,6 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/controllers/conectar.php';
-
+require_once("conectar.php");
 
 class denuncia
 {
@@ -24,7 +23,6 @@ class denuncia
     public function carregar()
     {
         $querry = "SELECT*FROM denuncias WHERE id_denuncia = :id";
-        var_dump($querry);
         $conexao = conectarDB::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt -> bindValue(':id', $this->id_denuncia);

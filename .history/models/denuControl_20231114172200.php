@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/controllers/conectar.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/controllers/denuControl.php';
 
 
 class denuncia
@@ -18,6 +18,8 @@ class denuncia
         if ($id_denuncia) {
             $this->id_denuncia = $id_denuncia;
             $this->carregar();
+            var_dump($this->id_denuncia);
+            exit();
         }
     }
 
