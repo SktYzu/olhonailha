@@ -25,7 +25,7 @@
 }
 
 .card {
-    width: 75vw;
+    width: 75vw;                    
     background-color: #f8f9fa;
     height: auto;
     display: flex;
@@ -34,23 +34,30 @@
     padding: 10px;
     margin: 5px;
     justify-content: space-between;
+    transition: transform .4s;
+    
+    
 }
+
+
+.card:hover{
+    transform: scale(1.2);
+    bottom: 80px;
+
+}
+
 .card-flex{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
 }
 
 .card-desc {
     display: grid;
     gap: 10px;
 }
-
-/* .texto_limitado {
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-} */
 
 .centro {
     display: flex;

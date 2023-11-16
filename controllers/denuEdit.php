@@ -1,6 +1,5 @@
 <?php
-require_once 'denuControl.php';
-
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/denuControl.php';
 try {
     $id = $_POST['id'];
     $titulo = $_POST['titulo_denuncia'];

@@ -1,13 +1,13 @@
 <?php
-require_once("denuControl.php");
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/denuControl.php';
 
 
 try {
     $titulo = $_POST[
-        "titulo_denuncia"
+        "titulo"
     ];
     $descricao = $_POST[
-        "descricao_denuncia"
+        "descricao"
     ];
     $localidade = $_POST['local_denuncia'];
 
@@ -32,7 +32,7 @@ try {
 
     $denuncia->criar();
 
-    /* header('location:../views/index.php'); */
+    header('Location: /olhonailha/views/listaDenu.php');
     exit();
 } catch (Exception $e) {
     echo $e->getMessage();
