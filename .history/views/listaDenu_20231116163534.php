@@ -52,12 +52,11 @@ try {
             </div>
             <div class="card-uh">
                 <div>
+
                     <?= $d['data_hora']?>
                 </div>
-                <div>
-                    Usuario:
-                    <?= $d['id_usuario'] ?>
-                </div>
+                <div></div>
+                <?= $d['id_usuario'] ?>
 
 
 
