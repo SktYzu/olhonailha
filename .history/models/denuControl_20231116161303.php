@@ -76,7 +76,7 @@ class denuncia
         $querry = "SELECT * FROM denuncias where situacao= :situ";
         $conexao = conectarDB::conectar();
         $stmt = $conexao->prepare($querry);
-        $stmt->bindValue(":situ", $situacao);
+        $stmt->bindValue(":situ", $id_usuario);
         $stmt->execute();
         $lista = $stmt->fetchAll();
         return $lista;

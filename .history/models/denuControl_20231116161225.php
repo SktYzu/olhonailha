@@ -11,7 +11,7 @@ class denuncia
     public $local_denuncia;
     public $id_usuario;
     public $id_tipo;
-    public $situacao;
+    public $situacao
 
 
     public function __construct($id_denuncia = false)
@@ -71,12 +71,12 @@ class denuncia
         return $lista;
     }
 
-    public static function listarsitu($situacao)
+    public static function listarsitu($id_usuario)
     {
-        $querry = "SELECT * FROM denuncias where situacao= :situ";
+        $querry = "SELECT * FROM denuncias where id_usuario= :idu";
         $conexao = conectarDB::conectar();
         $stmt = $conexao->prepare($querry);
-        $stmt->bindValue(":situ", $situacao);
+        $stmt->bindValue(":idu", $id_usuario);
         $stmt->execute();
         $lista = $stmt->fetchAll();
         return $lista;

@@ -73,10 +73,10 @@ class denuncia
 
     public static function listarsitu($situacao)
     {
-        $querry = "SELECT * FROM denuncias where situacao= :situ";
+        $querry = "SELECT * FROM denuncias where id_usuario= :idu";
         $conexao = conectarDB::conectar();
         $stmt = $conexao->prepare($querry);
-        $stmt->bindValue(":situ", $situacao);
+        $stmt->bindValue(":idu", $id_usuario);
         $stmt->execute();
         $lista = $stmt->fetchAll();
         return $lista;

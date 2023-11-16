@@ -33,11 +33,8 @@
     gap: 10px;
     padding: 10px;
     margin: 5px;
-    justify-content: space-between;
-}
-.card-flex{
-    display: flex;
-    gap: 10px;
+
+
 }
 
 .card-desc {
@@ -66,5 +63,5 @@
 }
 
 .card-uh{
-    left: 100%;
+    position: e;
 }

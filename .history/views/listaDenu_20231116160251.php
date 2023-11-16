@@ -1,9 +1,8 @@
 <?php
-
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/denuControl.php';
 try {
-    $denuncias = denuncia::listarsitu(1);
+    $denuncias = denuncia::listar();
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
@@ -20,7 +19,7 @@ try {
 <div class="container_card">
     <?php foreach ($denuncias as $d): ?>
         <div class="card">
-            <div class="card-flex">
+            <div>
                 <img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px"
                     height="200px">
                     <div class="card-desc">
@@ -44,14 +43,11 @@ try {
                             <h5>Local:</h5>
                             <p>
                                 <?= $d['local_denuncia'] ?>
-                                
-                                
                             </p>
                         </div>
                     </div>
             </div>
             <div class="card-uh">
-                
                 <?= $d['data_hora']?>
 
             </div>

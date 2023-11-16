@@ -1,9 +1,8 @@
 <?php
-
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/denuControl.php';
 try {
-    $denuncias = denuncia::listarsitu(1);
+    $denuncias = denuncia::listar();
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
@@ -44,14 +43,14 @@ try {
                             <h5>Local:</h5>
                             <p>
                                 <?= $d['local_denuncia'] ?>
-                                
+                                <?php date("j, n, Y")?>
                                 
                             </p>
                         </div>
                     </div>
             </div>
             <div class="card-uh">
-                
+            date_default_timezone_set('America/Sao_Paulo');
                 <?= $d['data_hora']?>
 
             </div>
