@@ -27,10 +27,10 @@ CREATE TABLE Denuncias(
     descricao TEXT NOT NULL,
     foto_denuncia LONGBLOB,
     local_denuncia VARCHAR(255) NOT NULL,
+    situacao INT,
     data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     id_usuario INT,
     id_tipo INT,
-    situacao INT,
     FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario),
     FOREIGN KEY (id_tipo) REFERENCES TiposDenuncias(id_tipo)
 );
