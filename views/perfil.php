@@ -2,7 +2,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
 ?>
 
- <section style="background-color: #eee; margin: 1rem">
+<section style="background-color: #eee; margin: 1rem">
   <div class="container py-5">
     <div class="row">
       <div class="col">
@@ -17,11 +17,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
     </div>
 
     <div class="row">
-      <div class="col-lg-4">
-        
-        
-      </div>
-      <div class="col-lg-8">
+      
+      <div class="col-lg-8 container center">
         <div class="card mb-4">
           <div class="card-body">
             <div class="row">
@@ -65,6 +62,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
         </div>
        
       </div>
+    </div>
+    <div class="d-flex justify-content-center mb-2">
+      <button type="button" class="btn btn-primary">Editar</button>
+      <button type="button" class="btn btn-outline-primary ms-1">Remover</button>
     </div>
   </div>
 </section>
