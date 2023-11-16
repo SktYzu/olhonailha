@@ -16,7 +16,7 @@ try {
     <a href="#" class="btn btn-primary m-3">Adicionar Denuncia +</a>
 </div>
 
-<div class="container_card">
+<div class="container_card" style="color: rgb(75 85 99);">
     <?php foreach ($denuncias as $d): ?>
         <div class="card">
             <div>

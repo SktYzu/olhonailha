@@ -13,7 +13,7 @@ try {
 ?>
 
 <div class="centro">
-    <a href="#" class="btn btn-primary m-3">Adicionar Denuncia +</a>
+    <h1>Aqui pode ser um botão de adicionar denuncia ? </h1>
 </div>
 
 <div class="container_card">
@@ -26,12 +26,12 @@ try {
             <div class="card-desc">
                 <div>
                     <h4>
-                        <?= $d['titulo'] ?> 
+                        <?= $d['titulo'] ?> :
                         <?php if (isset($d['situacao'])): ?>
-                            <?php if ($d['situacao'] == 1): ?>
-                                : Em Aberto!
+                            <?php if ($d['situacao'] == 0): ?>
+                                Em Aberto!
                             <?php endif; ?>
-                        <?php endif; ?> 
+                        <?php endif; ?>S
                     </h4> 
                 </div>
                 <div>

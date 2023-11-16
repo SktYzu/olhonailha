@@ -30,7 +30,7 @@ CREATE TABLE Denuncias(
     data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     id_usuario INT,
     id_tipo INT,
-    situacao INT,
+    situação
     FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario),
     FOREIGN KEY (id_tipo) REFERENCES TiposDenuncias(id_tipo)
 );

@@ -13,43 +13,33 @@ try {
 ?>
 
 <div class="centro">
-    <a href="#" class="btn btn-primary m-3">Adicionar Denuncia +</a>
+    <h1>Aqui pode ser um botão de adicionar denuncia ? </h1>
 </div>
 
 <div class="container_card">
     <?php foreach ($denuncias as $d): ?>
         <div class="card">
             <div>
-                <img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px"
-                    height="200px">
+            <img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px" height="200px">
             </div>
             <div class="card-desc">
                 <div>
                     <h4>
-                        <?= $d['titulo'] ?> 
-                        <?php if (isset($d['situacao'])): ?>
-                            <?php if ($d['situacao'] == 1): ?>
-                                : Em Aberto!
-                            <?php endif; ?>
-                        <?php endif; ?> 
-                    </h4> 
+                        <?=$d['titulo']?>  :em aberto
+                    </h4>
                 </div>
                 <div>
                     <h5>descrição:</h5>
                     <p class="texto_limitado">
-                        <?= $d['descricao'] ?>
+                    <?=$d['descricao']?>
                     </p>
                 </div>
                 <div>
                     <h5>Local:</h5>
-                    <p>
-                        <?= $d['local_denuncia'] ?>
-                    </p>
+                    <p><?=$d['local_denuncia']?></p>
                 </div>
             </div>
-            <div class="card-uh">
-
-            </div>
+            <div class></div>
         </div>
     <?php endforeach; ?>
 </div>

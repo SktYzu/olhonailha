@@ -25,7 +25,7 @@ try {
             </div>
             <div class="card-desc">
                 <div>
-                    <h4>
+                    <h4 style="color: rgb(75 85 99);">
                         <?= $d['titulo'] ?> 
                         <?php if (isset($d['situacao'])): ?>
                             <?php if ($d['situacao'] == 1): ?>

@@ -25,7 +25,7 @@ try {
             </div>
             <div class="card-desc">
                 <div>
-                    <h4>
+                    <h4 style="color: rgb(75 85 99);">
                         <?= $d['titulo'] ?> 
                         <?php if (isset($d['situacao'])): ?>
                             <?php if ($d['situacao'] == 1): ?>
@@ -35,14 +35,14 @@ try {
                     </h4> 
                 </div>
                 <div>
-                    <h5>descrição:</h5>
-                    <p class="texto_limitado">
+                    <h5 style="color: rgb(75 85 99);">descrição:</h5>
+                    <p class="texto_limitado" style="color: rgb(75 85 99);">
                         <?= $d['descricao'] ?>
                     </p>
                 </div>
                 <div>
-                    <h5>Local:</h5>
-                    <p>
+                    <h5 style="color: rgb(75 85 99);">Local:</h5>
+                    <p style="color: rgb(75 85 99);">
                         <?= $d['local_denuncia'] ?>
                     </p>
                 </div>

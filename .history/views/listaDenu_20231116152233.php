@@ -13,7 +13,7 @@ try {
 ?>
 
 <div class="centro">
-    <a href="#" class="btn btn-primary m-3">Adicionar Denuncia +</a>
+    <a href="#">Adiciona</a>
 </div>
 
 <div class="container_card">

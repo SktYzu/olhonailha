@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/usuario.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/usuarioC.php';
 
 try {
     $email = $_POST['email'];
@@ -10,5 +10,3 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
-
-
