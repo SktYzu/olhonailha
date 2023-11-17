@@ -20,7 +20,7 @@ CREATE TABLE TiposDenuncias(
     id_tipo INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
     descricao TEXT
-);
+); 
 
 /* armazena a denuncia */
 CREATE TABLE Denuncias(
@@ -29,6 +29,8 @@ CREATE TABLE Denuncias(
     descricao TEXT NOT NULL,
     foto_denuncia LONGBLOB,
     local_denuncia VARCHAR(255) NOT NULL,
+    situacao INT,
+    data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     id_usuario INT,
     id_tipo INT,
     FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario),

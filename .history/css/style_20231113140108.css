@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 960px;
+}
+
+.container_denu{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+.card {
+    width: 70vw;
+    background-color: #f5f5f5;
+
+>>>>>>> db73b9311eaae1c392b3ee60b64c168f7f0418a1
+}

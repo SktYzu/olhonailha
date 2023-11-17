@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 960px;
+}
+
+.container{
+    display: flex;
+    justify-content: center ;
+}
+
+.card{
+    width: 900vw;
+    background-color: #f5f5f5;
+    height: auto;
+    display: flex;
+
+
+}
+
+.card-desc{
+    display: grid;
+    gap: 10px;
+}
