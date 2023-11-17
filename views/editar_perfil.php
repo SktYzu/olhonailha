@@ -31,9 +31,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
     
               </div>
             
-            <button type="submit" class="btn btn-primary">Editar</button>
+            <button type="submit" class="btn btn-primary">Editar</button><br>
+            <div class="mt-3"><a href="" class="btn btn-outline-danger">Excluir Perfil</a></div>
           </form>
-
     </section>
     <footer style="text-align: center; padding: 1rem; margin-top: 140px; background-color: rgba(0, 195, 255, 0.89);">Todos os direitos reservados &copy;</footer>
     

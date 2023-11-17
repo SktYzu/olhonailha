@@ -65,7 +65,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
     </div>
     <div class="d-flex justify-content-center mb-2">
       <button type="button" class="btn btn-primary">Editar</button>
-      <button type="button" class="btn btn-outline-primary ms-1">Excluir Perfil</button>
+     
     </div>
   </div>
 </section>
