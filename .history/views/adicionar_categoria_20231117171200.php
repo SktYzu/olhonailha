@@ -12,7 +12,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
     </div>
     <div class="mb-3">
       <label for="descricao" class="form-label">Descrição</label>
-      <textarea rows="4" cols="50" class="form-control" name="descricao" id="descricao"></textarea>
+      <textarea rows="4" cols="50" class="form-control" name="descricao" id="descricao" form="usrform"></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Adicionar</button>
   </form>

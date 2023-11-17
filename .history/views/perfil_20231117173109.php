@@ -142,7 +142,7 @@ try {
           <a href="" class="btn btn-outline-primary">Editar</a>
         </td>
         <td>
-          <a href="/olhonailha/controllers\tipoDelet.php?id=<?= $t['id_tipo'] ?>" class="btn btn-outline-danger">Remover</a>
+          <a href="/olhonailha/controllers\tipoDelet.php?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-danger">Remover</a>
         </td>
       </tr>
       <?php endforeach ?>

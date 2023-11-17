@@ -1,7 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/denuControl.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/tipo_denuncia.php';
 try {
   /* $id=$_SESSION['Usuario']['id_usuario']; */
     $denuncias = denuncia::listar();
@@ -142,7 +141,7 @@ try {
           <a href="" class="btn btn-outline-primary">Editar</a>
         </td>
         <td>
-          <a href="/olhonailha/controllers\tipoDelet.php?id=<?= $t['id_tipo'] ?>" class="btn btn-outline-danger">Remover</a>
+          <a href="" class="btn btn-outline-danger">Remover</a>
         </td>
       </tr>
       <?php endforeach ?>

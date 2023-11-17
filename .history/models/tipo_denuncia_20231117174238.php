@@ -21,7 +21,7 @@ public function carregar(){
     $tipos = $stmt->fetch();
     $this->id_tipo = $tipos['id_tipo'];
     $this->nome = $tipos['nome'];
-    $this->descricao = $tipos['descricao'];
+    $this->des = $tipos['descricao'];
     
 }
 

@@ -13,15 +13,6 @@ public function __construct($id_tipo = false){
 }
 
 public function carregar(){
-    $query='SELECT * FROM tiposdenuncias WHERE id_tipo = :id';
-    $conexao= Conexao::conectar();
-    $stmt = $conexao->prepare($query);
-    $stmt ->bindValue(':id', $this->id_tipo);
-    $stmt->execute();
-    $tipos = $stmt->fetch();
-    $this->id_tipo = $tipos['id_tipo'];
-    $this->nome = $tipos['nome'];
-    $this->descricao = $tipos['descricao'];
     
 }
 
@@ -41,8 +32,6 @@ public function criar(){
     $stmt->bindValue(':nome', $this->nome);
     $stmt->bindValue(':descr', $this->descricao);
     $stmt->execute();
-    $this->id_tipo = $conexao->lastInsertId();
-    return $this->id_tipo;
 }
 public function deletar(){
     $query = "DELETE FROM tiposdenuncias WHERE id_tipo = :id";
