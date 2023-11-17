@@ -13,7 +13,7 @@ $tipos=TipoDenuncia:: listar();
 
 <div class="container mt-5">
         <h2>Formulário de Denúncia</h2>
-        <form action="salvar_denuncia.php" method="post" enctype="multipart/form-data">
+        <form action="/olhonailha/controllers/denuncia_add_controller.php" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="titulo" class="form-label">Título</label>
                 <input type="text" class="form-control" id="titulo" name="titulo" required>
@@ -33,7 +33,7 @@ $tipos=TipoDenuncia:: listar();
             </div>
             <div class="mb-3">
                 <label for="id_usuario" class="form-label">ID do Usuário</label>
-                <input type="number" class="form-control" id="id_usuario" name="id_usuario" required>
+                <input type="number" class="form-control" id="id_usuario" name="id_usuario">
             </div>
             <div class="mb-3">
                 <label for="id_tipo" class="form-label">ID do Tipo</label>
