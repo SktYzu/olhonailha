@@ -2,6 +2,8 @@
 
 CREATE DATABASE olhonailha;
 
+USE olhonailha;
+
 /* sao os usuarios e administradores do sistema */
 CREATE TABLE Usuarios(
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
