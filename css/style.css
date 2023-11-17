@@ -7,3 +7,34 @@
 .container {
     max-width: 960px;
 }
+
+body{
+background-image: url('/olhonailha/imgs/ProjetoI.png');
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+header {
+    background-image: url('/olhonailha/imgs/Projeto.png');
+    min-height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    position: absolute;
+    left: 75px;
+    top: 100px;
+}
+
+.cad {
+    position: absolute;
+    right: 100px;
+    top: 100px;
+}
+
+.footer {
+    width: 100%;
+    color: black;
+}
