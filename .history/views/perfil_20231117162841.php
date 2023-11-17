@@ -98,7 +98,7 @@ try {
         <td><?=$d['id_tipo']?></td>
         <td><?=$d['titulo']?></td>
         <td><?=$d['descricao']?></td>
-        <td><?=$d['local_denuncia']?></td>
+        <td><?=$d['local']?></td>
         <td><?=$d['desc']?></td>
         <td>
           <a href="" class="btn btn-outline-primary">Editar</a>
