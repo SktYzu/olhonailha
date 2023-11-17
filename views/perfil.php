@@ -64,7 +64,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
       </div>
     </div>
     <div class="d-flex justify-content-center mb-2">
-      <button type="button" class="btn btn-primary">Editar</button>
+    <a href="" class="btn btn-primary">Editar</a>
+
      
     </div>
   </div>
