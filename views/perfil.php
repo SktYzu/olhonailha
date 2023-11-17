@@ -78,13 +78,13 @@ try {
       </div>
     </div>
     <div class="d-flex justify-content-center mb-2">
-      <a href="" class="btn btn-primary">Editar</a>
 
 
+    
+    <a href="C:\xampp\htdocs\olhonailha\views\editar_perfil.php" class="btn btn-primary">Editar</a>
     </div>
   </div>
 </section>
-
 <section style="margin: 1rem auto;">
   <h2 style="text-align: center;">Denúncias</h2>
   <div class="mx-auto p-5" style="width: 1000px;">
