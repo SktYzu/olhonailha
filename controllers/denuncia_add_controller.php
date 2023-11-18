@@ -22,7 +22,7 @@ try {
     if ($foto) {
         $denuncia->foto_denuncia = $foto;
     } else {
-        $denuncia->foto_denuncia = file_get_contents('../models/erro.jpg');
+        $denuncia->foto_denuncia = file_get_contents('../imgs/erro.jpg');
     }
     $denuncia->criar();
 

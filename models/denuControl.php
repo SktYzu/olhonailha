@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/controllers/conectar.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/olhonailha/db/conexao.php";
 
 
 class denuncia
@@ -26,7 +26,7 @@ class denuncia
     {
         $querry = "SELECT*FROM denuncias WHERE id_denuncia = :id";
         var_dump($querry);
-        $conexao = conectarDB::conectar();
+        $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt -> bindValue(':id', $this->id_denuncia);
         $stmt->execute();
@@ -42,7 +42,7 @@ class denuncia
     {
 
         $querry = "INSERT INTO denuncias (titulo,descricao,foto_denuncia,local_denuncia)VALUES(:titulo,:descri,:foto,:loc)";
-        $conexao = conectarDB::conectar();
+        $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt -> bindValue(":titulo", $this->titulo);
         $stmt -> bindValue(":descri", $this->descricao);
@@ -55,7 +55,7 @@ class denuncia
 
     public static function listar(){
         $querry = "SELECT * FROM denuncias";
-        $conexao = conectarDB::conectar();
+        $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt -> execute();
         $lista = $stmt->fetchAll();
@@ -63,7 +63,7 @@ class denuncia
         public static function listaruser($id_usuario)
     {
         $querry = "SELECT * FROM denuncias where id_usuario= :idu";
-        $conexao = conectarDB::conectar();
+        $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":idu", $id_usuario);
         $stmt->execute();
@@ -74,7 +74,7 @@ class denuncia
     public static function listarsitu($situacao)
     {
         $querry = "SELECT * FROM denuncias where situacao= :situ";
-        $conexao = conectarDB::conectar();
+        $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":situ", $situacao);
         $stmt->execute();
@@ -85,7 +85,7 @@ class denuncia
     public  function editar()
     {
         $querry = "UPDATE denuncias SET titulo = :titu, descricao = :desc, foto_denuncia = :foto, local_denuncia = :loc WHERE id_denuncia = :id ";
-        $conexao = conectarDB::conectar();
+        $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt -> bindValue(":titu", $this->titulo);
         $stmt -> bindValue(":desc", $this->descricao);
@@ -98,7 +98,7 @@ class denuncia
     public function deletar()
     {
         $querry = "DELETE FROM denuncias WHERE id_denuncia = :id";
-        $conexao = conectarDB::conectar();
+        $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt-> bindValue("id", $this->id_denuncia);
         $stmt-> execute();

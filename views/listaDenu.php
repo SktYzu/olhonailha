@@ -24,7 +24,7 @@ try {
 
 <div class="container_card">
     <?php foreach ($denuncias as $d) : ?>
-        <div class="card">
+        <div class="card_f">
             <div class="card-flex">
                 <div style="width: 100%;">
                     O usuario :<?= $d['id_usuario'] ?>, postou a seguinte denuncia :

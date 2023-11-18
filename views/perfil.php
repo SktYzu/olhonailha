@@ -97,7 +97,7 @@ try {
         <th>Imagem</th>
         
         <th colspan="2">
-          <a href="" class="btn btn-outline-success">Adicionar</a>
+          <a href="/olhonailha/views/denuncia.php" class="btn btn-outline-success">Adicionar</a>
         </th>
       </tr>
       <?php foreach ($denuncias as $d) : ?>
@@ -111,7 +111,7 @@ try {
           <a href="" class="btn btn-outline-primary">Editar</a>
         </td>
         <td>
-          <a href="" class="btn btn-outline-danger">Remover</a>
+          <a href="/olhonailha/controllers\denuDelet.php?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-danger">Remover</a>
         </td>
       </tr>
       <?php endforeach ?>
@@ -127,11 +127,11 @@ try {
       <tr>
 
 
-        <th>Tipo Descrição</th>
+        <th>Tipo de Denuncia</th>
         <th>Descrição</th>
 
         <th colspan="2">
-          <a href="" class="btn btn-outline-success">Adicionar</a>
+          <a href="adicionar_categoria.php" class="btn btn-outline-success">Adicionar</a>
         </th>
       </tr>
       <?php foreach ($tipos as $t) : ?>
@@ -139,7 +139,7 @@ try {
         <td><?= $t['nome']?></td>
         <td><?= $t['descricao']?></td>
         <td>
-          <a href="" class="btn btn-outline-primary">Editar</a>
+          <a href="/olhonailha/views/editar_categoria.php?id=<?=$t['id_tipo']?>" class="btn btn-outline-primary">Editar</a>
         </td>
         <td>
           <a href="/olhonailha/controllers\tipoDelet.php?id=<?= $t['id_tipo'] ?>" class="btn btn-outline-danger">Remover</a>

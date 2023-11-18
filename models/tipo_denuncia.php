@@ -44,6 +44,17 @@ public function criar(){
     $this->id_tipo = $conexao->lastInsertId();
     return $this->id_tipo;
 }
+
+public function editar(){
+    $query = 'UPDATE tiposdenuncias SET nome = :nome , descricao = :descr WHERE id_tipo = :id';
+    $conexao = conexao::conectar();
+    $stmt = $conexao->prepare($query);
+    $stmt->bindValue(':id', $this->id_tipo);
+    $stmt->bindValue(':nome', $this->nome);
+    $stmt->bindValue(':descr', $this->descricao);
+    $stmt->execute();
+}
+
 public function deletar(){
     $query = "DELETE FROM tiposdenuncias WHERE id_tipo = :id";
     $conexao = conexao::conectar();
