@@ -12,6 +12,7 @@ try {
   $tipos=TipoDenuncia:: listar();
   } catch (PDOException $th) {
     echo $th->getMessage();
+  
   }
 ?>
 
@@ -80,7 +81,7 @@ try {
 
 
     
-    <a href="\olhonailha\views\editar_perfil.php" class="btn btn-primary">Editar</a>
+    <a href="C:\xampp\htdocs\olhonailha\views\editar_perfil.php" class="btn btn-primary">Editar</a>
     </div>
   </div>
 </section>

@@ -23,23 +23,23 @@ try {
 </div>
 
 <div class="container_card">
-    <?php foreach ($denuncias as $d): ?>
+    <?php foreach ($denuncias as $d) : ?>
         <div class="card_f">
             <div class="card-flex">
                 <div style="width: 100%;">
-                    O usuario :
-                    <?= $d['id_usuario'] ?>, postou a seguinte denuncia :
+                    O usuario :<?= $d['id_usuario'] ?>, postou a seguinte denuncia :
                 </div>
-                <div style="display: flex; justify-content: center; width: 300px; height: 300px;">
-                    <img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px"
-                        height="auto">
+                <div sty>
+                    <img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px" height="200px">
                 </div>
                 <div class="card-desc">
+
                     <div>
+
                         <h4 style="font-size: 2.2vw;">
                             <?= $d['titulo'] ?>
-                            <?php if (isset($d['situacao'])): ?>
-                                <?php if ($d['situacao'] == 1): ?>
+                            <?php if (isset($d['situacao'])) : ?>
+                                <?php if ($d['situacao'] == 1) : ?>
                                     : Em Aberto!
                                 <?php endif; ?>
                             <?php endif; ?>
@@ -60,8 +60,7 @@ try {
                         </p>
                     </div>
                     <p>Data e Hora:<br>
-                        <?= $d['data_hora'] ?>
-                    </p>
+                        <?= $d['data_hora'] ?></p>
                 </div>
             </div>
         </div>
