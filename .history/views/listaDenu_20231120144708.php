@@ -34,7 +34,7 @@ try {
 
                     <div>
 
-                        <h4 style="font-size: 2.2vw;">
+                        <h4 style="font-size: 3vw;">
                             <?= $d['titulo'] ?>
                             <?php if (isset($d['situacao'])) : ?>
                                 <?php if ($d['situacao'] == 1) : ?>
@@ -44,13 +44,13 @@ try {
                         </h4>
                     </div>
                     <div>
-                        <h5 style="font-size: 2vw;">descrição:</h5>
+                        <h5>descrição:</h5>
                         <p class="texto_limitado">
                             <?= $d['descricao'] ?>
                         </p>
                     </div>
                     <div>
-                        <h5 style="font-size: 2vw;">Local:</h5>
+                        <h5>Local:</h5>
                         <p>
                             <?= $d['local_denuncia'] ?>
 

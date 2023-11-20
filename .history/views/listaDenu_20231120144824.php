@@ -34,7 +34,7 @@ try {
 
                     <div>
 
-                        <h4 style="font-size: 2.2vw;">
+                        <h4 style="font-size: 2.7vw;">
                             <?= $d['titulo'] ?>
                             <?php if (isset($d['situacao'])) : ?>
                                 <?php if ($d['situacao'] == 1) : ?>
