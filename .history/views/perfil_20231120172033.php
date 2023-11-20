@@ -56,8 +56,11 @@ try {
                 <p class="text-muted mb-0">Rua 1, Centro</p>
               </div>
             </div>
+
+
           </div>
         </div>
+
       </div>
     </div>
     <div class="d-flex justify-content-center mb-2">

@@ -1,6 +1,4 @@
 <?php
-
-require_once $_SERVER['DOCUMENT_ROOT'] . "/olhonailha/db/conexao.php";
 class usuario
 {
     public $id_usuario;
@@ -20,7 +18,7 @@ class usuario
     public function carregar()
     {
         $querry = "SELECT * FROM usuarios where id_usuario = :id";
-        $conexao = Conexao::conectar();
+        $conexao = conectarDB::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":id", $this->id_usuario);
         $stmt->execute();
@@ -34,8 +32,8 @@ class usuario
 
     public function criar()
     {
-        $querry = "INSERT INTO usuarios (nome, email, senha) VALUES (:nome,:email,:senha)";
-        $conexao = Conexao::conectar();
+        $querry = "INSERT INTO usuarios (nome, email, senha) VALUES (:nome,:email,:cel,:ender,:senha)";
+        $conexao = conectarDB::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":nome", $this->nome);
         $stmt->bindValue(":email", $this->email);
@@ -45,8 +43,8 @@ class usuario
 
     public function atualizar()
     {
-        $querry = "UPDATE usuarios SET nome=:nome,email=:email WHERE id_usuario = :id";
-        $conexao = Conexao::conectar();
+        $querry = "UPDATE usuarios SET nome=:nome,email=:email,celular=:cel,endereco=:ender WHERE id_usuario = :id";
+        $conexao = conectarDB::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":id", $this->id_usuario);
         $stmt->bindValue(":nome", $this->nome);
@@ -57,7 +55,7 @@ class usuario
     public function deletar()
     {
         $querry = "DELETE FROM usuarios WHERE id_usuario=:id";
-        $conexao = Conexao::conectar();
+        $conexao = conectarDB::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":id", $this->id_usuario);
         $stmt->execute();

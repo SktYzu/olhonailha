@@ -17,7 +17,9 @@ try {
 
 <section style="background-color: #eee; margin: 1rem">
   <div class="container py-5">
+
     <div class="row">
+
       <div class="col-lg-8 container center">
         <div class="card mb-4">
           <div class="card-body">
@@ -56,8 +58,11 @@ try {
                 <p class="text-muted mb-0">Rua 1, Centro</p>
               </div>
             </div>
+
+
           </div>
         </div>
+
       </div>
     </div>
     <div class="d-flex justify-content-center mb-2">

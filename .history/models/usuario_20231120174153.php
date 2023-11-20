@@ -1,6 +1,4 @@
 <?php
-
-require_once $_SERVER['DOCUMENT_ROOT'] . "/olhonailha/db/conexao.php";
 class usuario
 {
     public $id_usuario;
@@ -46,7 +44,7 @@ class usuario
     public function atualizar()
     {
         $querry = "UPDATE usuarios SET nome=:nome,email=:email WHERE id_usuario = :id";
-        $conexao = Conexao::conectar();
+        $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":id", $this->id_usuario);
         $stmt->bindValue(":nome", $this->nome);
@@ -57,7 +55,7 @@ class usuario
     public function deletar()
     {
         $querry = "DELETE FROM usuarios WHERE id_usuario=:id";
-        $conexao = Conexao::conectar();
+        $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":id", $this->id_usuario);
         $stmt->execute();

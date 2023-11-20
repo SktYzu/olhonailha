@@ -1,6 +1,4 @@
 <?php
-
-require_once $_SERVER['DOCUMENT_ROOT'] . "/olhonailha/db/conexao.php";
 class usuario
 {
     public $id_usuario;

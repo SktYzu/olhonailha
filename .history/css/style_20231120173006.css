@@ -1,0 +1,116 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container_denu {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.container {
+    max-width: 960px;
+}
+
+.container_card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 10px;
+}
+
+.card_f {
+    width: 75vw;                    
+    background-color: #f8f9fa;
+    height: auto;
+    display: flex;
+    flex-direction: row;        
+    gap: 10px;
+    padding: 10px;
+    margin: 5px;
+    justify-content: space-between;
+    transition: transform .4s;
+    
+    
+}
+
+
+.card_f:hover{
+    transform: scale(1.2);
+    bottom: 80px;
+
+}
+
+.card-flex{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.card-desc {
+    display: grid;
+    gap: 10px;
+}
+
+.centro {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.texto {
+    white-space: pre;
+}
+
+.card-uh{
+    left: 100%;
+    display: grid;
+}
+
+/* Area de loguin_cadastro */
+
+<?php if (isset($_COOKIE['msg'])) : ?>
+    <?php if ($_COOKIE['tipo'] === 'sucesso') : ?>
+        <div class="alert alert-success text-center m-3" role="alert">
+            <?= $_COOKIE['msg'] ?>
+        </div>
+    <?php elseif ($_COOKIE['tipo'] === 'perigo') : ?>
+        <div class="alert alert-danger text-center m-3" role="alert">
+            <?= $_COOKIE['msg'] ?>
+        </div>
+    <?php else : ?>
+        <div class="alert alert-info text-center m-3" role="alert">
+            <?= $_COOKIE['msg'] ?>
+        </div>
+    <?php endif; ?>
+<?php endif; ?>
+
+<div class="login-card">
+    <div class="card-header">
+        <div class="log">Login</div>
+    </div>
+    <form action="../controllers/usuarioLogin.php" method="post">
+        <div class="form-group">
+            <label for="username">E-mail:</label>
+            <input name="email" id="username" type="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input name="senha" id="password" type="password">
+        </div>
+        <div class="form-group">
+            <input value="Login" type="submit">
+        </div>
+        <p>Se não tiver conta, <a href="cadastro.php">Cadastre-se</a></p>
+    </form>
+</div>

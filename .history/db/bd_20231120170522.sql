@@ -29,7 +29,7 @@ CREATE TABLE Denuncias(
     descricao TEXT NOT NULL,
     foto_denuncia LONGBLOB,
     local_denuncia VARCHAR(255) NOT NULL,
-    situacao INT DEFAULT 1,
+    situacao INT DEFA,
     data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     id_usuario INT,
     id_tipo INT,

@@ -22,7 +22,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
     <div class="card-header">
         <div class="log">Login</div>
     </div>
-    <form action="/olhonailha/controllers/login_controller.php" method="post">
+    <form action="/controllers/usuarioLogin.php" method="post">
         <div class="form-group">
             <label for="username">E-mail:</label>
             <input name="email" id="username" type="email">

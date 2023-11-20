@@ -1,7 +1,5 @@
 <?php
-
-require_once $_SERVER['DOCUMENT_ROOT'] . "/olhonailha/db/conexao.php";
-class usuario
+    class usuario
 {
     public $id_usuario;
     public $nome;
@@ -20,7 +18,7 @@ class usuario
     public function carregar()
     {
         $querry = "SELECT * FROM usuarios where id_usuario = :id";
-        $conexao = Conexao::conectar();
+        $conexao = conectarDB::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":id", $this->id_usuario);
         $stmt->execute();
@@ -28,36 +26,49 @@ class usuario
 
         $this->nome = $usuario["nome"];
         $this->email = $usuario["email"];
+        $this->celular = $usuario["celular"];
+        $this->endereco = $usuario["endereco"];
         $this->senha = $usuario["senha"];
         $this->nivel_acesso = $usuario["nivel_acesso"];
     }
 
-    public function criar()
-    {
-        $querry = "INSERT INTO usuarios (nome, email, senha) VALUES (:nome,:email,:senha)";
-        $conexao = Conexao::conectar();
+    public function criar(){
+        $querry = "INSERT INTO usuarios (nome, email, celular, endereco, senha) VALUES (:nome,:email,:cel,:ender,:senha)";
+        $conexao = conectarDB::conectar();
         $stmt = $conexao->prepare($querry);
-        $stmt->bindValue(":nome", $this->nome);
+        $stmt ->bindValue(":nome", $this->nome);
         $stmt->bindValue(":email", $this->email);
+        $stmt->bindValue(":cel", $this->celular);
+        $stmt->bindValue(":ender", $this->endereco);
         $stmt->bindValue(":senha", $this->senha);
         $stmt->execute();
     }
 
-    public function atualizar()
-    {
-        $querry = "UPDATE usuarios SET nome=:nome,email=:email WHERE id_usuario = :id";
-        $conexao = Conexao::conectar();
+
+    public function listar(){
+        $querry = "SELECT * FROM usuarios";
+        $conexao = conectarDB::conectar();
+        $stmt = $conexao->prepare($querry);
+        $stmt->execute();
+        $restultado = $stmt->fetch();
+        return $restultado;
+    }
+
+    public function atualizar(){
+        $querry = "UPDATE usuarios SET nome=:nome,email=:email,celular=:cel,endereco=:ender WHERE id_usuario = :id";
+        $conexao = conectarDB::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":id", $this->id_usuario);
         $stmt->bindValue(":nome", $this->nome);
         $stmt->bindValue(":email", $this->email);
+        $stmt->bindValue(":cel", $this->celular);
+        $stmt->bindValue(":ender", $this->endereco);
         $stmt->execute();
     }
 
-    public function deletar()
-    {
+    public function deletar(){
         $querry = "DELETE FROM usuarios WHERE id_usuario=:id";
-        $conexao = Conexao::conectar();
+        $conexao = conectarDB::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":id", $this->id_usuario);
         $stmt->execute();
@@ -87,24 +98,7 @@ class usuario
 
             header("Location: login.php");
             exit();
-
+            
         }
-    }
-}
-
-class utilitarios
-{
-    public static function validEmail($email)
-    {
-        $email = trim($email);
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    public static function sanitizaEmail($email)
-    {
-        return filter_var($email, FILTER_SANITIZE_EMAIL);
     }
 }

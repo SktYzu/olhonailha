@@ -1,6 +1,4 @@
 <?php
-
-require_once $_SERVER['DOCUMENT_ROOT'] . "/olhonailha/db/conexao.php";
 class usuario
 {
     public $id_usuario;
@@ -35,7 +33,7 @@ class usuario
     public function criar()
     {
         $querry = "INSERT INTO usuarios (nome, email, senha) VALUES (:nome,:email,:senha)";
-        $conexao = Conexao::conectar();
+        $conexao = ::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":nome", $this->nome);
         $stmt->bindValue(":email", $this->email);
