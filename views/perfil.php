@@ -84,9 +84,9 @@ try {
     </div>
   </div>
 </section>
-<section style="margin: 1rem auto;">
+<section class="m-lg">
   <h2 style="text-align: center;">Denúncias</h2>
-  <div class="mx-auto p-5" style="width: 1000px;">
+  <div class="mx-left py-5">
     <table class="table table-striped table table-bordered text-center">
       <tr>
         <th>Tipo</th>
@@ -96,7 +96,7 @@ try {
         <th>Imagem</th>
         
         <th colspan="2">
-          <a href="/olhonailha/views/denuncia.php" class="btn btn-outline-success">Adicionar</a>
+          <a href="/olhonailha/views/denuncia.php" class="btn btn-outline-success">Add</a>
         </th>
       </tr>
       <?php foreach ($denuncias as $d) : ?>
@@ -119,9 +119,9 @@ try {
 
 
 </section>
-<section style="margin: 1rem auto;">
+<section class="m-lg">
   <h2 style="text-align: center;">Categorias Denúncia</h2>
-  <div class="mx-auto p-5" style="width: 1000px;">
+  <div class="mx-auto py-5 pr-5">
     <table class="table table-striped table table-bordered text-center">
       <tr>
 
@@ -130,7 +130,7 @@ try {
         <th>Descrição</th>
 
         <th colspan="2">
-          <a href="adicionar_categoria.php" class="btn btn-outline-success">Adicionar</a>
+          <a href="adicionar_categoria.php" class="btn btn-outline-success">Add</a>
         </th>
       </tr>
       <?php foreach ($tipos as $t) : ?>
@@ -153,17 +153,17 @@ try {
 
 
 
-<section style="margin: 1rem auto;">
+<section class="m-lg">
   <h2 style="text-align: center;">Faqs</h2>
-  <div class="mx-auto p-5" style="width: 1000px;">
+  <div class="mx-left py-5">
     <table class="table table-striped table table-bordered text-center">
       <tr>
         <th>id_faq</th>
-        <th>pergunta_faq</th>
-        <th>resposta_faq</th>
+        <th>perg_faq</th>
+        <th>resp_faq</th>
 
         <th colspan="2">
-          <a href="" class="btn btn-outline-success">Adicionar</a>
+          <a href="" class="btn btn-outline-success">Add</a>
         </th>
       </tr>
       <tr>
@@ -174,7 +174,7 @@ try {
           <a href="" class="btn btn-outline-primary">Editar</a>
         </td>
         <td>
-          <a href="" class="btn btn-outline-danger">Remover</a>
+          <a href="" class="btn btn-outline-danger">Excluir</a>
         </td>
       </tr>
     </table>
