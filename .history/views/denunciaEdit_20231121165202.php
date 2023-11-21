@@ -22,7 +22,7 @@ try {
         </div>
         <div class="mb-3">
             <label for="descricao" class="form-label">Descrição</label>
-            <textarea class="form-control" id="descricao" name="descricao" rows="4" required><?=$denuncia->descricao?></textarea>
+            <textarea class="form-control" id="descricao" name="descricao" rows="4" required><?=$denuncia->descricao?> </textarea>
         </div>
         <div class="mb-3">
             <label for="foto_denuncia" class="form-label">Foto da Denúncia</label>
