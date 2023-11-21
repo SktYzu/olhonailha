@@ -116,7 +116,7 @@ try {
           <td><?=$d['local_denuncia']?></td>
           <td><img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px" height="200px"></td>
           <td>
-            <a href="/olhonailha/views/denunciaEdit.php?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-primary">Editar</a>
+            <a href="/olhonailha/views/.php?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-primary">Editar</a>
           </td>
           <td>
             <a href="/olhonailha/controllers\denuDelet.php?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-danger">Remover</a>
