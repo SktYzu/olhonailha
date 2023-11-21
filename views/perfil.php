@@ -7,6 +7,16 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/usuario.php';
 if (!isset($_SESSION['usuario'])) {
   header('Location: login.php');
 }
+
+
+
+try {
+  /* $id=$_SESSION['Usuario']['id_usuario']; */
+    $denuncias = denuncia::listar();
+} catch (PDOException $e) {
+    echo $e->getMessage();
+
+}
 try {
   $id = $_SESSION['usuario']['id_usuario'];
 
@@ -22,6 +32,7 @@ try {
   echo $th->getMessage();
 }
 ?>
+
 <?php if (isset($_COOKIE['msg'])): ?>
   <?php if ($_COOKIE['tipo'] === 'sucesso'): ?>
     <div class="alert alert-success text-center m-3" role="alert">
@@ -37,6 +48,12 @@ try {
     </div>
   <?php endif; ?>
 <?php endif; ?>
+
+<style>
+  .tabela-responsiva{
+    overflow-x: auto;
+  }
+</style>
 
 <section style="background-color: #eee; margin: 1rem">
   <div class="container py-5">
@@ -75,47 +92,70 @@ try {
   </div>
   </div>
 </section>
-<section style="margin: 1rem auto;">
-  <h2 style="text-align: center;">Denúncias</h2>
-  <div class="mx-auto p-5" style="width: 1000px;">
-    <table class="table table-striped table table-bordered text-center">
-      <tr>
-        <th>Tipo</th>
-        <th>Título</th>
-        <th>Descrição</th>
-        <th>Local</th>
-        <th>Imagem</th>
-
-        <th colspan="2">
-          <a href="/olhonailha/views/denuncia.php" class="btn btn-outline-success">Adicionar</a>
-        </th>
-      </tr>
-      <?php foreach ($denuncias as $d): ?>
+  <section class="m-lg">
+    <h2 style="text-align: center;">Denúncias</h2>
+    <div class="tabela-responsiva">
+    <div class="mx-left py-5">
+      <table class="table table-striped table table-bordered text-center">
         <tr>
+          <th>Tipo</th>
+          <th>Título</th>
+          <th>Descrição</th>
+          <th>Local</th>
+          <th>Imagem</th>
+  
+          <th colspan="2">
+            <a href="/olhonailha/views/denuncia.php" class="btn btn-outline-success">Add</a>
+          </th>
+        </tr>
+        <?php foreach ($denuncias as $d) : ?>
+        <tr>
+          <td><?=$d['id_tipo']?></td>
+          <td><?=$d['titulo']?></td>
+          <td><?=$d['descricao']?></td>
+          <td><?=$d['local_denuncia']?></td>
+          <td><img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px" height="200px"></td>
           <td>
-            <?= $d['id_tipo'] ?>
+            <a href="" class="btn btn-outline-primary">Editar</a>
           </td>
           <td>
-            <?= $d['titulo'] ?>
-          </td>
-          <td>
-            <?= $d['descricao'] ?>
-          </td>
-          <td>
-            <?= $d['local_denuncia'] ?>
-          </td>
-          <td><img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px"
-              height="200px"></td>
-          <td>
-            <a href="/olhonailha/views/denunciaEdit.php?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-primary">Editar</a>
-          </td>
-          <td>
-            <a href="/olhonailha/controllers\denuDelet.php?id=<?= $d['id_denuncia'] ?>"
-              class="btn btn-outline-danger">Remover</a>
+            <a href="/olhonailha/controllers\denuDelet.php?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-danger">Remover</a>
           </td>
         </tr>
-      <?php endforeach ?>
-    </table>
+        <?php endforeach ?>
+      </table>
+    </div>
+        </div>
+  
+  </section>
+
+<section class="m-lg">
+  <h2 style="text-align: center;">Categorias Denúncia</h2>
+
+  <div class="tabela-responsiva">
+    <div class="mx-auto py-5 pr-5">
+      <table class="table table-striped table table-bordered text-center">
+        <tr>
+          <th>Tipo de Denuncia</th>
+          <th>Descrição</th>
+          <th colspan="2">
+            <a href="adicionar_categoria.php" class="btn btn-outline-success">Add</a>
+          </th>
+        </tr>
+        <?php foreach ($tipos as $t) : ?>
+        <tr>
+          <td><?= $t['nome']?></td>
+          <td><?= $t['descricao']?></td>
+          <td>
+            <a href="/olhonailha/views/editar_categoria.php?id=<?=$t['id_tipo']?>" class="btn btn-outline-primary">Editar</a>
+          </td>
+          <td>
+            <a href="/olhonailha/controllers\tipoDelet.php?id=<?= $t['id_tipo'] ?>" class="btn btn-outline-danger">Remover</a>
+          </td>
+        </tr>
+        <?php endforeach ?>
+      </table>
+    </div>
   </div>
 </section>
 
@@ -156,17 +196,18 @@ try {
     </div>
   </section>
 
-  <section style="margin: 1rem auto;">
-    <h2 style="text-align: center;">Faqs</h2>
-    <div class="mx-auto p-5" style="width: 1000px;">
+<section class="m-lg">
+  <h2 style="text-align: center;">Faqs</h2>
+  <div class="tabela-responsiva">
+    <div class="mx-left py-5">
       <table class="table table-striped table table-bordered text-center">
         <tr>
           <th>id_faq</th>
-          <th>pergunta_faq</th>
-          <th>resposta_faq</th>
-
+          <th>perg_faq</th>
+          <th>resp_faq</th>
           <th colspan="2">
-            <a href="" class="btn btn-outline-success">Adicionar</a>
+            <a href="" class="btn btn-outline-success">Add</a>
+
           </th>
         </tr>
         <tr>
@@ -178,6 +219,7 @@ try {
           </td>
           <td>
             <a href="" class="btn btn-outline-danger">Remover</a>
+            <a href="" class="btn btn-outline-danger">Excluir</a>
           </td>
         </tr>
       </table>
@@ -185,6 +227,11 @@ try {
   </section>
 <?php endif ?>
 </section>
+
+  </div>
+</section>
+
+
 
 
 <footer style="text-align: center; padding: 1rem; margin-bottom: 5px; background-color: rgba(0, 195, 255, 0.89);">Todos
