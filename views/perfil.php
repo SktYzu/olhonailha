@@ -21,6 +21,14 @@ try {
   .tabela-responsiva{
     overflow-x: auto;
   }
+
+  .desc{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    overflow: scroll;
+  
+  }
 </style>
 
 <section style="background-color: #eee; margin: 1rem">
@@ -114,7 +122,7 @@ try {
         <tr>
           <td><?=$d['id_tipo']?></td>
           <td><?=$d['titulo']?></td>
-          <td><?=$d['descricao']?></td>
+          <td class="desc"><?=$d['descricao']?></td>
           <td><?=$d['local_denuncia']?></td>
           <td><img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px" height="200px"></td>
           <td>
