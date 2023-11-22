@@ -59,6 +59,14 @@ try {
   .tabela-responsiva {
     overflow-x: auto;
   }
+
+  .desc{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    overflow: scroll;
+  
+  }
 </style>
 
 <section style="background-color: #eee; margin: 1rem">
@@ -114,34 +122,25 @@ try {
             <a href="/olhonailha/views/denuncia.php" class="btn btn-outline-success">Add</a>
           </th>
         </tr>
-        <?php foreach ($denuncias as $d): ?>
+        <?php foreach ($denuncias as $d) : ?>
           <?php $id = $d['id_tipo'];
           $tipo = new TipoDenuncia($id);
           ?>
-          <tr>
-            <td>
+        <tr>
+        <td>
               <?= $tipo->id_tipo . "-" . $tipo->nome ?>
             </td>
-            <td>
-              <?= $d['titulo'] ?>
-            </td>
-            <td>
-              <?= $d['descricao'] ?>
-            </td>
-            <td>
-              <?= $d['local_denuncia'] ?>
-            </td>
-            <td><img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px"
-                height="200px"></td>
-            <td>
-              <a href="/olhonailha/views/denunciaEdit.php?id=<?= $d['id_denuncia'] ?>"
-                class="btn btn-outline-primary">Editar</a>
-            </td>
-            <td>
-              <a href="/olhonailha/controllers\denuDelet.php?id=<?= $d['id_denuncia'] ?>"
-                class="btn btn-outline-danger">Remover</a>
-            </td>
-          </tr>
+          <td><?=$d['titulo']?></td>
+          <td class="desc"><?=$d['descricao']?></td>
+          <td><?=$d['local_denuncia']?></td>
+          <td><img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px" height="200px"></td>
+          <td>
+            <a href="" class="btn btn-outline-primary">Editar</a>
+          </td>
+          <td>
+            <a href="/olhonailha/controllers\denuDelet.php?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-danger">Remover</a>
+          </td>
+        </tr>
         <?php endforeach ?>
       </table>
     </div>
