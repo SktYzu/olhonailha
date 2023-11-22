@@ -38,7 +38,7 @@ try {
         </div>
         <div class="mb-3">
             <label for="id_tipo" class="form-label">ID do Tipo</label>
-            <select name="tipo" id="tipo"> 
+            <select name="tipo" id="tipo">
                 <?php foreach ($tipos as $tipo): ?>
                     <option value="<?= $tipo["id_tipo"] ?>">
                         <?= $tipo["id_tipo"] ?>-

@@ -63,7 +63,7 @@
                         
                         <?php if (isset($_SESSION['usuario'])): ?>
                             
-                            <li class="nav-item">
+                            <li class="nav-item mx-auto">
                                 <a class="nav-link active" href="/olhonailha/controllers/logout_controller.php">Logout</a>
                             </li>   
                         <?php else: ?>

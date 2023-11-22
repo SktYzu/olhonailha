@@ -28,7 +28,7 @@ try {
         <div class="card_f">
             <div class="card-flex">
                 <div style="width: 100%;">
-                    <b><?=$usuario->nome?></b>, postou a seguinte denuncia :
+                    O usuario <b><?=$usuario->nome?></b>, postou a seguinte denuncia :
                 </div>
                 <div style="display: flex; justify-content: center; width: 300px; height: 300px;">
                     <img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px"

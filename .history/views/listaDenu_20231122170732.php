@@ -17,7 +17,7 @@ try {
 ?>
 
 <div class="centro">
-    <a href="Adddenu.php" class="btn btn-success m-3">Denuncias Resolvidas </a>
+    <a href="Adddenu.php" class="btn btn-success m-3">Denuncias Resolvidas </a> cade
 </div>
 
 <div class="container_card">
