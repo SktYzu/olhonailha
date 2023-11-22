@@ -43,7 +43,7 @@ try {
             <td><img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="30%"></td>
             <?php if ($_SESSION['usuario']['nivel_acesso'] = 1): ?>
                 <td>
-                    <a href="/olhonailha/views/denunciaEdit.php?id=<?= $d['id_denuncia'] ?>">Editar</a>
+                    <a href="?id=<?= $d['id_denuncia'] ?>">Editar</a>
                 </td>
                 <td>
                     <a href="/olhonailha/controllers\denuDelet.php?id=<?= $d['id_denuncia'] ?>">Deletar</a>

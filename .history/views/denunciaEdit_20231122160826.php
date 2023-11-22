@@ -5,7 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/denuControl.php';
 if (!isset($_SESSION['usuario'])) {
     header('Location: login.php');
     exit();
-}
+  }
 try {
     $id = $_GET["id"];
     $denuncia = new denuncia($id);

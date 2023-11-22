@@ -28,7 +28,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex flex-row">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/olhonailha/index.php">Olho na Ilha</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -63,7 +63,7 @@
                         
                         <?php if (isset($_SESSION['usuario'])): ?>
                             
-                            <li class="nav-item mx-5">
+                            <li class="nav-item">
                                 <a class="nav-link active" href="/olhonailha/controllers/logout_controller.php">Logout</a>
                             </li>   
                         <?php else: ?>
