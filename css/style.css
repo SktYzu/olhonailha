@@ -28,13 +28,29 @@ header {
     top: 100px;
 }
 
-.cad {
+/* .cad {
     position: absolute;
     right: 100px;
     top: 100px;
+} */
+
+
+.text_sobre {
+    text-align: center;
+    color: rgb(40, 23, 187); 
+    padding: 10px;
+    margin: center;
+    background-color: azure;
+
+
 }
 
-.footer {
+.cabecalho{
     width: 100%;
-    color: black;
+    float: left;
+    padding: 3% 4%;
+}
+
+footer{
+    margin: center;
 }

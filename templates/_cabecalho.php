@@ -16,14 +16,22 @@
 </head>
 
 <body>
-    <header class="d-flex flex-column justify-content-end">
 
-        <div class="logo">
-            <a href="" class="btn btn-primary">LOGO</a>
+
+    <header class="d-flex flex-column justify-content-between">
+
+        <div class="d-flex justify-content-between align-items-center p-3">
+            <div class="col-sm-4 col-lg-1 col-4">
+                <a href="/olhonailha/index.php">
+                    <img src="/olhonailha/imgs/ilha.jpeg" alt="olho" class="w-100">
+                </a>
+            </div>
+            <div class="cad">
+                <a href="/olhonailha/views/login.php" class="btn btn-primary">LOGIN</a>
+                <a href="/olhonailha/controllers/logout_controller.php" class="btn btn-primary">LOGOUT</a>
+            </div>
         </div>
-        <div class="cad">
-            <a href="" class="btn btn-primary">CADASTRE-SE</a>
-        </div>
+
 
         <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid">
@@ -36,21 +44,25 @@
                             <a class="nav-link text-white" aria-current="page" href="/olhonailha/views/denuncia.php">FAÇA UMA DENÚNCIA</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="/olhonailha/views/feed.php">PROBLEMAS SOLUCIONADOS</a>
+                            <a class="nav-link text-white" href="/olhonailha/views/feed.php">FEED DE DENÚNCIAS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="/olhonailha/views/feed.php">DENÚNCIAS</a>
+                            <a class="nav-link text-white" href="/olhonailha/views/faqs.php">FAQs</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="/olhonailha/views/sobre.php">SOBRE</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/olhonailha/views/perfil.php">PERFIL</a>
+                        </li>
+
 
                     </ul>
                 </div>
             </div>
         </nav>
-        
+
     </header>
-    
-    
+
+
     <main>
