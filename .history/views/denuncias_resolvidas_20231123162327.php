@@ -3,7 +3,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/denuControl.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/usuario.php';
 try {
-    $denuncias = denuncia::listarsitu(2);
+    $denuncias = denuncia::listar(2);
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
@@ -35,7 +35,7 @@ try {
                 <div class="situacao">
                     <h5>Situação:</h5>
                     <?php if (isset($d['situacao'])): ?>
-                        <?php if ($d['situacao'] >= 2): ?>
+                        <?php if ($d['situacao'] == 2): ?>
                             <h5 style="color:green" ;>Solucionada!</h5>
                         <?php endif; ?>
                     <?php endif; ?>

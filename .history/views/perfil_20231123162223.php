@@ -16,6 +16,7 @@ try {
   echo $e->getMessage();
 }
 
+
 try {
   /* $id=$_SESSION['Usuario']['id_usuario']; */
   $denuncias = denuncia::listar();
