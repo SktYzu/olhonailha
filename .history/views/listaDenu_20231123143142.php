@@ -28,7 +28,7 @@ try {
         <div class="card_f">
             <div class="card-flex">
                 <div style="width: 100%;">
-                    <b><?= $usuario->nome ?></b>, postou a seguinte denuncia :
+                    <b><?=$usuario->nome?></b>, postou a seguinte denuncia :
                 </div>
                 <div style="display: flex; justify-content: center; width: 300px; height: 300px;">
                     <img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px"
@@ -66,63 +66,3 @@ try {
 
     <?php endforeach; ?>
 </div> -->
-
-
-<div class="centro">
-    <a href="denuncias_resolvidas.php" class="btn btn-success m-3">Clique aqui para ir as Denuncias Resolvidas </a>
-</div>
-<section class="container_card">
-    <?php foreach ($denuncias as $d): ?>
-        <container class="card_f">
-            <div class="conteudo">
-                <?php $id = $d['id_usuario'];
-                $usuario = new usuario($id);
-                ?>
-                <div style="width: 100%;">
-                    O usuario
-                    <?= $usuario->nome ?> postou a seguinte denuncia :
-                </div>
-                <br>
-                <br>
-
-                <div class="titulo">
-                    <h2>
-                        <?= $d['titulo'] ?>
-                    </h2>
-                </div>
-                <div class="situacao">
-                    <h5>Situação:</h5>
-                    <?php if (isset($d['situacao'])): ?>
-                        <?php if ($d['situacao'] == 1): ?>
-                            <h5 style="color:red" ;>Em Aberto!</h5>
-                        <?php endif; ?>
-                    <?php endif; ?>
-
-                </div>
-
-                <div class="local">
-                    <h5>Local:</h5>
-                    <p>
-                        <?= $d['local_denuncia'] ?>
-                    </p>
-                </div>
-
-                <div class="descricao">
-                    <h5>Descrição</h5>
-                    <p>
-                        <?= $d['descricao'] ?>
-                    </p>
-                </div>
-
-
-
-                <img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="">
-
-
-
-            </div>
-        </container>z
-
-    <?php endforeach; ?>
-
-</section>

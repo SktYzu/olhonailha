@@ -94,7 +94,7 @@ class denuncia
         $stmt->bindValue(':id_tipo', $this->id_tipo);
         $stmt->bindValue(':descr', $this->descricao);
         $stmt->bindValue(":id", $this->id_denuncia);
-        $stmt->bindValue(":situ", $this->situacao);
+        $stmt->bindValue(":id", $this->id_denuncia);
         $stmt->execute();
     }
 
