@@ -28,3 +28,7 @@ try {
         <?php endforeach; ?>
     </div>
 </section>
+
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_footer.php';
+?>

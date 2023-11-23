@@ -37,3 +37,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
         <p>Se não tiver conta, <a href="cadastro.php">Cadastre-se</a></p>
     </form>
 </div>
+
+
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_footer.php';
+?>

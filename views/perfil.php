@@ -21,7 +21,6 @@ try {
   $denuncias = denuncia::listar();
 } catch (PDOException $e) {
   echo $e->getMessage();
-
 }
 try {
   $id = $_SESSION['usuario']['id_usuario'];
@@ -39,16 +38,16 @@ try {
 }
 ?>
 
-<?php if (isset($_COOKIE['msg'])): ?>
-  <?php if ($_COOKIE['tipo'] === 'sucesso'): ?>
+<?php if (isset($_COOKIE['msg'])) : ?>
+  <?php if ($_COOKIE['tipo'] === 'sucesso') : ?>
     <div class="alert alert-success text-center m-3" role="alert">
       <?= $_COOKIE['msg'] ?>
     </div>
-  <?php elseif ($_COOKIE['tipo'] === 'perigo'): ?>
+  <?php elseif ($_COOKIE['tipo'] === 'perigo') : ?>
     <div class="alert alert-danger text-center m-3" role="alert">
       <?= $_COOKIE['msg'] ?>
     </div>
-  <?php else: ?>
+  <?php else : ?>
     <div class="alert alert-info text-center m-3" role="alert">
       <?= $_COOKIE['msg'] ?>
     </div>
@@ -101,9 +100,9 @@ try {
       </div>
     </div>
     <div class="d-flex justify-content-center mb-2">
-    <a href="\olhonailha\views\editar_perfil.php" class="btn btn-primary">Editar</a>
-  </div>
-  
+      <a href="\olhonailha\views\editar_perfil.php" class="btn btn-primary">Editar</a>
+    </div>
+
 </section>
 <section class="m-lg">
   <h2 style="text-align: center;">Denúncias</h2>
@@ -121,7 +120,7 @@ try {
             <a href="/olhonailha/views/denuncia.php" class="btn btn-outline-success">Add</a>
           </th>
         </tr>
-        <?php foreach ($denuncias as $d): ?>
+        <?php foreach ($denuncias as $d) : ?>
           <?php $id = $d['id_tipo'];
           $tipo = new TipoDenuncia($id);
           ?>
@@ -138,15 +137,12 @@ try {
             <td>
               <?= $d['local_denuncia'] ?>
             </td>
-            <td><img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px"
-                height="200px"></td>
+            <td><img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px" height="200px"></td>
             <td>
-              <a href="/olhonailha/views/denunciaEdit.php?id=<?= $d['id_denuncia'] ?>"
-                class="btn btn-outline-primary">Editar</a>
+              <a href="/olhonailha/views/denunciaEdit.php?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-primary">Editar</a>
             </td>
             <td>
-              <a href="/olhonailha/controllers\denuDelet.php?id=<?= $d['id_denuncia'] ?>"
-                class="btn btn-outline-danger">Remover</a>
+              <a href="/olhonailha/controllers\denuDelet.php?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-danger">Remover</a>
             </td>
           </tr>
         <?php endforeach ?>
@@ -156,7 +152,7 @@ try {
 
 </section>
 
-<?php if ($nivel >= 2): ?>
+<?php if ($nivel >= 2) : ?>
   <section class="m-lg">
     <h2 style="text-align: center;">Categorias Denúncia</h2>
 
@@ -170,7 +166,7 @@ try {
               <a href="adicionar_categoria.php" class="btn btn-outline-success">Add</a>
             </th>
           </tr>
-          <?php foreach ($tipos as $t): ?>
+          <?php foreach ($tipos as $t) : ?>
             <tr>
               <td>
                 <?= $t['nome'] ?>
@@ -179,12 +175,10 @@ try {
                 <?= $t['descricao'] ?>
               </td>
               <td>
-                <a href="/olhonailha/views/editar_categoria.php?id=<?= $t['id_tipo'] ?>"
-                  class="btn btn-outline-primary">Editar</a>
+                <a href="/olhonailha/views/editar_categoria.php?id=<?= $t['id_tipo'] ?>" class="btn btn-outline-primary">Editar</a>
               </td>
               <td>
-                <a href="/olhonailha/controllers\tipoDelet.php?id=<?= $t['id_tipo'] ?>"
-                  class="btn btn-outline-danger">Remover</a>
+                <a href="/olhonailha/controllers\tipoDelet.php?id=<?= $t['id_tipo'] ?>" class="btn btn-outline-danger">Remover</a>
               </td>
             </tr>
           <?php endforeach ?>
@@ -203,12 +197,11 @@ try {
             <th>perg_faq</th>
             <th>resp_faq</th>
             <th colspan="2">
-              <a href="/olhonailha/views/admin/faq_criar.php" class="btn btn-outline-success"
-                class="btn btn-outline-success">Add</a>
+              <a href="/olhonailha/views/admin/faq_criar.php" class="btn btn-outline-success" class="btn btn-outline-success">Add</a>
 
             </th>
           </tr>
-          <?php foreach ($faqs as $f): ?>
+          <?php foreach ($faqs as $f) : ?>
             <tr>
               <td>
                 <?= $f['id_faq'] ?>
@@ -220,12 +213,10 @@ try {
                 <?= $f['resposta_faq'] ?>
               </td>
               <td>
-                <a href="/olhonailha/views/admin/faq_editar.php?id=<?= $f['id_faq'] ?>"
-                  class="btn btn-outline-primary">Editar</a>
+                <a href="/olhonailha/views/admin/faq_editar.php?id=<?= $f['id_faq'] ?>" class="btn btn-outline-primary">Editar</a>
               </td>
               <td>
-                <a href="/olhonailha/controllers/faq_delete_controller.php?id=<?= $f['id_faq'] ?>"
-                  class="btn btn-outline-danger">Remover</a>
+                <a href="/olhonailha/controllers/faq_delete_controller.php?id=<?= $f['id_faq'] ?>" class="btn btn-outline-danger">Remover</a>
               </td>
             </tr>
           <?php endforeach; ?>
@@ -242,9 +233,6 @@ try {
 
 
 
-<footer style="text-align: center; padding: 1rem; margin-bottom: 5px; background-color: rgba(0, 195, 255, 0.89);">Todos
-  os direitos reservados &copy;</footer>
-
-</body>
-
-</html>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_footer.php';
+?>

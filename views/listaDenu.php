@@ -21,7 +21,7 @@ try {
 </div>
 
 <div class="container_card">
-    <?php foreach ($denuncias as $d): ?>
+    <?php foreach ($denuncias as $d) : ?>
         <?php $id = $d['id_usuario'];
         $usuario = new usuario($id);
         ?>
@@ -38,8 +38,8 @@ try {
                     <div>
                         <h4 style="font-size: 2.2vw;">
                             <?= $d['titulo'] ?>
-                            <?php if (isset($d['situacao'])): ?>
-                                <?php if ($d['situacao'] == 1): ?>
+                            <?php if (isset($d['situacao'])) : ?>
+                                <?php if ($d['situacao'] == 1) : ?>
                                     : Em Aberto!
                                 <?php endif; ?>
                             <?php endif; ?>
@@ -72,7 +72,7 @@ try {
     <a href="denuncias_resolvidas.php" class="btn btn-success m-3">Clique aqui para ir as Denuncias Resolvidas </a>
 </div>
 <section class="container_card">
-    <?php foreach ($denuncias as $d): ?>
+    <?php foreach ($denuncias as $d) : ?>
         <container class="card_f">
             <div class="conteudo">
                 <?php $id = $d['id_usuario'];
@@ -92,8 +92,8 @@ try {
                 </div>
                 <div class="situacao">
                     <h5>Situação:</h5>
-                    <?php if (isset($d['situacao'])): ?>
-                        <?php if ($d['situacao'] == 1): ?>
+                    <?php if (isset($d['situacao'])) : ?>
+                        <?php if ($d['situacao'] == 1) : ?>
                             <h5 style="color:red" ;>Em Aberto!</h5>
                         <?php endif; ?>
                     <?php endif; ?>
@@ -121,8 +121,12 @@ try {
 
 
             </div>
-        </container>z
+        </container>
 
     <?php endforeach; ?>
 
 </section>
+
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_footer.php';
+?>

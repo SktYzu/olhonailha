@@ -48,8 +48,7 @@ if (!isset($_SESSION['usuario'])) {
 
 
 </section>
-<footer style="text-align: center; padding: 1rem; margin-top: 100px; background-color: rgba(0, 195, 255, 0.89);">Todos
-  os direitos reservados &copy;</footer>
-</body>
 
-</html>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_footer.php';
+?>

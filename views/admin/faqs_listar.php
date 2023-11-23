@@ -11,7 +11,7 @@ try {
 ?>
 
 <section class="m-3">
-<h1 class="display-4 fw-normal text-body-emphasis text-center m-3">Gerenciar FAQs</h1>
+    <h1 class="display-4 fw-normal text-body-emphasis text-center m-3">Gerenciar FAQs</h1>
     <table class="table table-striped text-center">
         <tr>
             <th>id</th>
@@ -38,3 +38,7 @@ try {
 
     </table>
 </section>
+
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_footer.php';
+?>

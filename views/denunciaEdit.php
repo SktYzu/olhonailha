@@ -13,7 +13,6 @@ try {
     $tipo_anterior = $denuncia->id_tipo;
 } catch (PDOException $th) {
     echo $th->getMessage();
-
 }
 ?>
 
@@ -27,8 +26,7 @@ try {
         </div>
         <div class="mb-3">
             <label for="descricao" class="form-label">Descrição</label>
-            <textarea class="form-control" id="descricao" name="descricao" rows="4"
-                required><?= $denuncia->descricao ?></textarea>
+            <textarea class="form-control" id="descricao" name="descricao" rows="4" required><?= $denuncia->descricao ?></textarea>
         </div>
         <div class="mb-3">
             <label for="foto_denuncia" class="form-label">Foto da Denúncia</label>
@@ -36,17 +34,15 @@ try {
         </div>
         <div class="mb-3">
             <label for="local_denuncia" class="form-label">Local da Denúncia</label>
-            <input type="text" class="form-control" id="local_denuncia" name="local_denuncia" required
-                value="<?= $denuncia->local_denuncia ?>">
+            <input type="text" class="form-control" id="local_denuncia" name="local_denuncia" required value="<?= $denuncia->local_denuncia ?>">
         </div>
         <div class="mb-3">
-            <input type="hidden" class="form-control" id="id_usuario" name="id_usuario"
-                value="<?= $_SESSION['usuario']['id_usuario'] ?>">
+            <input type="hidden" class="form-control" id="id_usuario" name="id_usuario" value="<?= $_SESSION['usuario']['id_usuario'] ?>">
         </div>
         <div class="mb-3">
             <label for="tipo" class="form-label">ID do Tipo</label>
             <select name="tipo" id="tipo">
-                <?php foreach ($tipos as $tipo): ?>
+                <?php foreach ($tipos as $tipo) : ?>
                     <option value="<?= $tipo['id_tipo'] ?>" <?= $tipo['id_tipo'] == $tipo_anterior ? "selected" : "" ?>>
                         <?= $tipo['id_tipo'] ?>-
                         <?= $tipo['nome'] ?>
@@ -64,3 +60,7 @@ try {
         <button type="submit" class="btn btn-primary">Enviar Denúncia</button>
     </form>
 </div>
+
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_footer.php';
+?>

@@ -14,7 +14,7 @@ try {
 </div>
 <section class="container_card">
 
-    <?php foreach ($denuncias as $d): ?>
+    <?php foreach ($denuncias as $d) : ?>
         <container class="card_f">
             <div class="conteudo">
                 <?php $id = $d['id_usuario'];
@@ -34,8 +34,8 @@ try {
                 </div>
                 <div class="situacao">
                     <h5>Situação:</h5>
-                    <?php if (isset($d['situacao'])): ?>
-                        <?php if ($d['situacao'] == 2): ?>
+                    <?php if (isset($d['situacao'])) : ?>
+                        <?php if ($d['situacao'] == 2) : ?>
                             <h5 style="color:green" ;>Solucionada!</h5>
                         <?php endif; ?>
                     <?php endif; ?>
@@ -68,3 +68,7 @@ try {
     <?php endforeach; ?>
 
 </section>
+
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_footer.php';
+?>

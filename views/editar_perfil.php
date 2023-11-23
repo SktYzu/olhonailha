@@ -20,14 +20,12 @@ try {
     <input type="hidden" value=" <?= $usuario->id_usuario ?>" name="id">
     <div class="mb-3">
       <label for="nome" class="form-label">Nome</label>
-      <input type="text" class="form-control" name="nome" id="nome" aria-describedby="emailHelp"
-        value=" <?= $usuario->nome ?>">
+      <input type="text" class="form-control" name="nome" id="nome" aria-describedby="emailHelp" value=" <?= $usuario->nome ?>">
 
     </div>
     <div class="mb-3">
       <label for="email" class="form-label">Email</label>
-      <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
-        value=" <?= $usuario->email ?>">
+      <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" value=" <?= $usuario->email ?>">
 
     </div>
     <!-- <div class="mb-3">
@@ -35,13 +33,11 @@ try {
       <input type="password" class="form-control" name="senha" id="senha">
     </div> -->
     <button type="submit" class="btn btn-primary">Editar</button><br>
-    <!-- <div class="mt-3"><a href="/olhonailha/controllers/delet_controller.php?id=<?=$usuario->id_usuario?>" class="btn btn-outline-danger">Excluir
+    <!-- <div class="mt-3"><a href="/olhonailha/controllers/delet_controller.php?id=<?= $usuario->id_usuario ?>" class="btn btn-outline-danger">Excluir
         Perfil</a></div> -->
   </form>
 </section>
-<footer style="text-align: center; padding: 1rem; margin-top: 140px; background-color: rgba(0, 195, 255, 0.89);">Todos
-  os direitos reservados &copy;</footer>
 
-</body>
-
-</html>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_footer.php';
+?>
