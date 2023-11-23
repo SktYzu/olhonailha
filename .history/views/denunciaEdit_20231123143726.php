@@ -54,13 +54,6 @@ try {
                 <?php endforeach; ?>
             </select>
         </div>
-        <div class="mb-3">
-            <label for="situacao">Situação</label>
-            <select name="situacao" id="situacao">
-                <option value="1" selected>1-Em Aberto</option>
-                <option value="2">2-Resolvida</option>
-            </select>
-        </div>
         <button type="submit" class="btn btn-primary">Enviar Denúncia</button>
     </form>
 </div>

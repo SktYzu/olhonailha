@@ -100,10 +100,11 @@ try {
         </div>
       </div>
     </div>
-    <div class="d-flex justify-content-center mb-2">
+  </div>
+  <div class="d-flex justify-content-center mb-2">
     <a href="\olhonailha\views\editar_perfil.php" class="btn btn-primary">Editar</a>
   </div>
-  
+  </div>
 </section>
 <section class="m-lg">
   <h2 style="text-align: center;">Denúncias</h2>

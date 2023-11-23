@@ -85,7 +85,7 @@ class denuncia
 
     public  function editar()
     {
-        $querry = "UPDATE denuncias SET titulo = :titulo, descricao = :descr, foto_denuncia = :fotos, local_denuncia = :local_denuncia, id_tipo = :id_tipo, situacao = :situ WHERE id_denuncia = :id ";
+        $querry = "UPDATE denuncias SET titulo = :titulo, descricao = :descr, foto_denuncia = :fotos, local_denuncia = :local_denuncia, id_tipo = :id_tipo, situacao = :situWHERE id_denuncia = :id ";
         $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(':titulo', $this->titulo);
@@ -94,7 +94,6 @@ class denuncia
         $stmt->bindValue(':id_tipo', $this->id_tipo);
         $stmt->bindValue(':descr', $this->descricao);
         $stmt->bindValue(":id", $this->id_denuncia);
-        $stmt->bindValue(":situ", $this->situacao);
         $stmt->execute();
     }
 

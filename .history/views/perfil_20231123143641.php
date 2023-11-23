@@ -100,10 +100,11 @@ try {
         </div>
       </div>
     </div>
-    <div class="d-flex justify-content-center mb-2">
+  </div>
+  <div class="d-flex justify-content-center mb-2">
     <a href="\olhonailha\views\editar_perfil.php" class="btn btn-primary">Editar</a>
   </div>
-  
+  </div>
 </section>
 <section class="m-lg">
   <h2 style="text-align: center;">Denúncias</h2>
@@ -134,7 +135,7 @@ try {
           <td><?=$d['local_denuncia']?></td>
           <td><img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" width="300px" height="200px"></td>
           <td>
-            <a href="/olhonailha/views/denunciaEdit.php?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-primary">Editar</a>
+            <a href="/olhonailha/views/?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-primary">Editar</a>
           </td>
           <td>
             <a href="/olhonailha/controllers\denuDelet.php?id=<?= $d['id_denuncia'] ?>" class="btn btn-outline-danger">Remover</a>

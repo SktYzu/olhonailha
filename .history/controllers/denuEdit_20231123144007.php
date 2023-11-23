@@ -6,7 +6,7 @@ try {
     $descricao = $_POST["descricao"];
     $local_denuncia = $_POST['local_denuncia'];
     $id_tipo = $_POST['tipo'];
-    $situacao = $_POST['situacao'];
+    $situacao = $_POST
 
     if (!empty($_FILES['foto_denuncia']['tmp_name'])) {
         $imagem = file_get_contents($_FILES['foto_denuncia']['tmp_name']);
@@ -17,7 +17,7 @@ try {
     $denuncia->descricao = $descricao;
     $denuncia->local_denuncia = $local_denuncia;
     $denuncia->id_tipo = $id_tipo;
-    $denuncia->situacao = $situacao;
+    $denuncia->situacao = $situacao
 
     if ($imagem) {
         $denuncia->foto_denuncia = $imagem;

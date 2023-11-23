@@ -69,7 +69,7 @@ try {
 
 
 <div class="centro">
-    <a href="denuncias_resolvidas.php" class="btn btn-success m-3">Clique aqui para ir as Denuncias Resolvidas </a>
+    <a href="denuncias_resolvidas.php" class="btn btn-success m-3">Denuncias Resolvidas </a>
 </div>
 <section class="container_card">
     <?php foreach ($denuncias as $d): ?>
@@ -93,8 +93,8 @@ try {
                 <div class="situacao">
                     <h5>Situação:</h5>
                     <?php if (isset($d['situacao'])): ?>
-                        <?php if ($d['situacao'] == 1): ?>
-                            <h5 style="color:red" ;>Em Aberto!</h5>
+                        <?php if ($d['situacao'] == 2): ?>
+                            <h5 style="color:green" ;>Solucionada!</h5>
                         <?php endif; ?>
                     <?php endif; ?>
 
