@@ -7,9 +7,6 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
-if (isset($_SESSION['usuario'])) {
-    $nivel = $_SESSION['usuario']['nivel_acesso'];
-};
 
 ?>
 

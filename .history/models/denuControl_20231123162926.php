@@ -63,7 +63,7 @@ class denuncia
         return $lista ;}
         public static function listaruser($id_usuario)
     {
-        $querry = "SELECT * FROM denuncias where id_usuario = :idu ORDER BY id_denuncia DESC";
+        $querry = "SELECT * FROM denuncias where id_usuario= :idu ORDER BY id_denuncia DESC";
         $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":idu", $id_usuario);
@@ -74,7 +74,7 @@ class denuncia
 
     public static function listarsitu($situacao)
     {
-        $querry = "SELECT * FROM denuncias where situacao = :situ";
+        $querry = "SELECT * FROM denuncias where situacao= :situ";
         $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":situ", $situacao);

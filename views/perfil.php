@@ -5,6 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/tipo_denuncia.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/usuario.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/faq.php';
 
+var_dump($nivel);
 if (!isset($_SESSION['usuario'])) {
   header('Location: login.php');
   exit();
@@ -14,7 +15,6 @@ try {
 } catch (PDOException $e) {
   echo $e->getMessage();
 }
-
 
 try {
   /* $id=$_SESSION['Usuario']['id_usuario']; */

@@ -3,7 +3,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/templates/_cabecalho.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/denuControl.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/olhonailha/models/usuario.php';
 try {
-    $denuncias = denuncia::listarsitu(2);
+    $situ = 2;
+    $denuncias = denuncia::listar(2);
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
