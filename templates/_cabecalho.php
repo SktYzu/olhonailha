@@ -33,19 +33,39 @@ if (isset($_SESSION['usuario'])){
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+
+    <header class="d-flex flex-column justify-content-between">
+
+        <div class="d-flex justify-content-between align-items-center p-3">
+            <div class="col-sm-4 col-lg-1 col-4">
+                <a href="/olhonailha/index.php">
+                    <img src="/olhonailha/imgs/ilha.jpeg" alt="olho" class="w-100">
+                </a>
+            </div>
+            <div class="cad">
+                <a href="/olhonailha/views/login.php" class="btn btn-primary">LOGIN</a>
+                <a href="/olhonailha/controllers/logout_controller.php" class="btn btn-primary">LOGOUT</a>
+            </div>
+        </div>
+
+
+        <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/olhonailha/index.php">Olho na Ilha</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav w-100 justify-content-evenly align-items-center">
+                        <li class="nav-item btn btn-danger ">
+                            <a class="nav-link text-white" aria-current="page" href="/olhonailha/views/denuncia.php">FAÇA UMA DENÚNCIA</a>
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/olhonailha/index.php">Inicio</a>
+                            <a class="nav-link text-white" href="/olhonailha/views/feed.php">FEED DE DENÚNCIAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/olhonailha/views/faqs.php">FAQs</a>
                         </li>
                         <?php if (isset($_SESSION['usuario'])): ?>
                             <!-- <li class="nav-item">
@@ -61,26 +81,20 @@ if (isset($_SESSION['usuario'])){
                         
                         <?php endif; ?>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/olhonailha/views/listaDenu.php">Feed de denuncias</a>
+
+                            <a class="nav-link text-white" href="/olhonailha/views/sobre.php">SOBRE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/olhonailha/views/faqs.php">FAQs</a>
+                            <a class="nav-link text-white" href="/olhonailha/views/perfil.php">PERFIL</a>
                         </li>
-                        
-                        <?php if (isset($_SESSION['usuario'])): ?>
-                            
-                            <li class="nav-item">
-                                <a class="nav-link active" href="/olhonailha/controllers/logout_controller.php">Logout</a>
-                            </li>   
-                        <?php else: ?>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="/olhonailha/views/login.php">Login</a>
-                            </li>
-                        <?php endif; ?>
+
+
                     </ul>
                 </div>
             </div>
         </nav>
+
     </header>
+
 
     <main>

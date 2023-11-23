@@ -1,7 +1,3 @@
-
-body{
-    
-}
 * {
     padding: 0;
     margin: 0;
@@ -38,16 +34,13 @@ body{
     padding: 10px;
     margin: 5px;
     justify-content: space-between;
-    transition: transform .4s;
-    
-    
+    transition: transform .4s;    
 }
 
 
 .card_f:hover{
     transform: scale(1.2);
     bottom: 80px;
-
 }
 
 .card-flex{
@@ -143,11 +136,6 @@ input[type="submit"]:hover {
 
 
 /* Codigo Cristian */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 .container_denu {
     display: flex;
@@ -160,7 +148,43 @@ input[type="submit"]:hover {
     max-width: 960px;
 }
 
+body{
+background-image: url('/olhonailha/imgs/ProjetoI.png');
+background-repeat: no-repeat;
+background-size: cover;
 
+}
+
+header {
+    background-image: url('/olhonailha/imgs/Projeto.png');
+    min-height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    position: absolute;
+    left: 75px;
+    top: 100px;
+}
+
+.text_sobre {
+    text-align: center;
+    color: rgb(40, 23, 187); 
+    padding: 10px;
+    margin: center;
+    background-color: azure;
+}
+
+.cabecalho{
+    width: 100%;
+    float: left;
+    padding: 3% 4%;
+}
+
+footer{
+    margin: center;
+}
 
 
 .card_f {
