@@ -1,8 +1,6 @@
 <?php session_start();
 
-if (isset($_SESSION['usuario'])){
-    $nivel = $_SESSION['usuario']['nivel_acesso'];
-};
+$nivel = $_SESSION['usuario']['nivel_acesso']
 
 ?>
 

@@ -35,8 +35,8 @@ try {
       <input type="password" class="form-control" name="senha" id="senha">
     </div> -->
     <button type="submit" class="btn btn-primary">Editar</button><br>
-    <!-- <div class="mt-3"><a href="/olhonailha/controllers/delet_controller.php?id=<?=$usuario->id_usuario?>" class="btn btn-outline-danger">Excluir
-        Perfil</a></div> -->
+    <div class="mt-3"><a href="/olhonailha/controllers/delet_controller.php" class="btn btn-outline-danger">Excluir
+        Perfil</a></div>
   </form>
 </section>
 <footer style="text-align: center; padding: 1rem; margin-top: 140px; background-color: rgba(0, 195, 255, 0.89);">Todos
