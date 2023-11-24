@@ -58,7 +58,7 @@ try {
 
 
 
-                <img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="">
+                <img src="data:image;charset=utf8;base64,<?= base64_encode($d['foto_denuncia']) ?>" alt="" class="w-100">
 
 
 
