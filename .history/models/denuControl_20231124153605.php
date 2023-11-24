@@ -74,7 +74,7 @@ class denuncia
 
     public static function listarsitu($situacao)
     {
-        $querry = "SELECT * FROM denuncias where situacao = :situ ORDER BY id_denuncia DESC";
+        $querry = "SELECT * FROM denuncias where situacao = :situ ORDER id_denuncia DESC";
         $conexao = conexao::conectar();
         $stmt = $conexao->prepare($querry);
         $stmt->bindValue(":situ", $situacao);
