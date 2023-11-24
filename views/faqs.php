@@ -9,8 +9,8 @@ try {
 }
 
 ?>
-<h1 class="display-4 fw-normal text-body-emphasis text-center m-3">FAQs</h1>
-<section class="container-fluid mt-3 col col-6">
+<h1 class="display-4 fw-normal text-body-emphasis text-center m-3 bg-white">FAQs</h1>
+<section class="container-fluid mt-3 mb-3 col col-6">
     <div class="accordion" id="accordionExample">
         <?php foreach ($faqs as $item) : ?>
             <div class="accordion-item">
