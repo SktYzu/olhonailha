@@ -8,14 +8,14 @@ USE olhonailha;
 CREATE TABLE Usuarios(
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255),
-    email VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL PRIMARY KEY,
     celular VARCHAR(255),
     endereco VARCHAR(255),
     senha VARCHAR(255) NOT NULL,
     nivel_acesso INT DEFAULT 1
 );
 
-/*  */
+/* Categoria de Denuncias  */
 CREATE TABLE TiposDenuncias(
     id_tipo INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE Denuncias(
     FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario),
     FOREIGN KEY (id_tipo) REFERENCES TiposDenuncias(id_tipo)
 );
-
+/* Faqs */
 CREATE TABLE Faqs(
     id_faq INT PRIMARY KEY AUTO_INCREMENT,
     pergunta_faq TEXT NOT NULL,

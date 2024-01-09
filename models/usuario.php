@@ -82,8 +82,8 @@ class usuario
             header("Location: /olhonailha/views/perfil.php");
             exit();
         } else {
-            setcookie('msg', 'Email ou Senha Incorreto!', time() + 10, '/olhonailha/');
-            setcookie('tipo', 'perigo', time() + 10, '/olhonailha/');
+            setcookie('msg', 'Email ou Senha Incorreto!', time() + 3, '/olhonailha/');
+            setcookie('tipo', 'perigo', time() + 3, '/olhonailha/');
 
             header("Location: /olhonailha/views/login.php");
             exit();

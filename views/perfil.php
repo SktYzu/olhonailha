@@ -137,7 +137,6 @@ try {
         $tipo = new TipoDenuncia($id);
         ?>
         <tr>
-
           <td class="td"> <?= $tipo->id_tipo . "-" . $tipo->nome ?></td>
           <td><?= $d['titulo'] ?></td>
           <td class="desc"><?= $d['descricao'] ?></td>

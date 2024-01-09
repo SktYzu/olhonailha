@@ -10,8 +10,8 @@ try {
     } else {
         throw new pdoException("Email Invalido");
     }
+    
     $nome = $_POST["nome"];
-
     $usuario = new usuario();
     $usuario->nome = $nome;
     $usuario->email = $email;

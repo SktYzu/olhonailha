@@ -34,13 +34,13 @@
     padding: 10px;
     margin: 5px;
     justify-content: space-between;
-    transition: transform .4s;    
+    /* transition: transform .4s;   */  
 }
 
 
-.card_f:hover{
-    transform: scale(1.2);
-    bottom: 80px;
+.card_f:hover {
+    /* transform: scale(1.2);
+    bottom: 80px; */
 }
 
 .card-flex{
@@ -149,7 +149,7 @@ input[type="submit"]:hover {
 }
 
 body{
-background-image: url('/olhonailha/imgs/ProjetoI.png');
+/* background-image: url('/olhonailha/imgs/ProjetoI.png'); */
 background-repeat: no-repeat;
 background-size: cover;
 
@@ -157,7 +157,7 @@ background-size: cover;
 
 header {
     background-image: url('/olhonailha/imgs/Projeto.png');
-    min-height: 20rem;
+    min-height: 9rem;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -186,28 +186,6 @@ footer{
     margin: center;
 }
 
-
-.card_f {
-    width: 75vw;
-    background-color: #f8f9fa;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    padding: 10px;
-    margin: 5px;
-    justify-content: space-between;
-    transition: transform .4s;
-
-
-}
-
-
-.card_f:hover {
-    transform: scale(1.2);
-    bottom: 80px;
-
-}
 
 .card-flex {
     display: flex;
@@ -252,13 +230,11 @@ footer{
 
 .card_f {
     display: flex;
-
-
-
     height: auto;
     width: 40vw;
-    margin-top: 5vw;
+    margin: 2.5vw 0 2.5vw 0;
     gap: 200px;
+    
 
 
     box-shadow: 2px 2px 10px #ccc;
@@ -276,18 +252,6 @@ footer{
     margin-right: 20px;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Area de loguin_cadastro */
 
@@ -355,7 +319,6 @@ input[type="submit"]:hover {
 
     .card_f {
         display: flex;
-
         height: auto;
         width: 90%;
         margin-top: 10vw;
@@ -385,7 +348,6 @@ input[type="submit"]:hover {
 
     .card_f {
         display: flex;
-
         height: auto;
         width: 95%;
         margin-top: 10vw;

@@ -8,8 +8,8 @@ session_destroy();
 
 
 header('Location: /olhonailha/views/login.php');
-setcookie('msg', "Você deslogou de sua conta com sucesso!", time() + 5, '/olhonailha/');
-setcookie('tipo', 'sucesso', time() + 5, '/olhonailha/');
+setcookie('msg', "Você deslogou de sua conta com sucesso!", time() + 3, '/olhonailha/');
+setcookie('tipo', 'sucesso', time() + 3, '/olhonailha/');
 header('Location: /olhonailha/views/perfil.php');
 
 exit();

@@ -24,6 +24,7 @@ if (isset($_SESSION['usuario'])) {
 
 
     <link rel="stylesheet" href="/olhonailha/css/style.css">
+    <script src="/olhonailha/js/script.js"></script>
 
     <!-- framework -->
 
@@ -33,7 +34,7 @@ if (isset($_SESSION['usuario'])) {
 <body>
 
 
-    <header class="d-flex flex-column justify-content-between">
+    <header class="d-flex flex-column justify-content-center">
 
         <div class="d-flex justify-content-between align-items-center p-3">
             <div class="col-sm-4 col-lg-1 col-4">
@@ -50,37 +51,36 @@ if (isset($_SESSION['usuario'])) {
             </div>
         </div>
 
-
-        <nav class="navbar navbar-expand-lg bg-primary">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav w-100 justify-content-evenly align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="/olhonailha/views/listaDenu.php">FEED DE DENÚNCIAS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="/olhonailha/views/faqs.php">FAQs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="/olhonailha/views/sobre.php">SOBRE</a>
-                        </li>
-                        <?php if (isset($_SESSION['usuario'])) : ?>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="/olhonailha/views/perfil.php">PERFIL</a>
-                            </li>
-                            <li class="nav-item btn btn-danger ">
-                                <a class="nav-link text-white" href="/olhonailha/views/denuncia.php">FAÇA UMA DENUNCIA</a>
-                            </li>
-                        <?php endif; ?>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
     </header>
+
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav w-100 justify-content-evenly align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/olhonailha/views/listaDenu.php">FEED DE DENÚNCIAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/olhonailha/views/faqs.php">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/olhonailha/views/sobre.php">SOBRE</a>
+                    </li>
+                    <?php if (isset($_SESSION['usuario'])) : ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/olhonailha/views/perfil.php">PERFIL</a>
+                        </li>
+                        <li class="nav-item btn btn-danger ">
+                            <a class="nav-link text-white" href="/olhonailha/views/denuncia.php">FAÇA UMA DENUNCIA</a>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 
     <main>
